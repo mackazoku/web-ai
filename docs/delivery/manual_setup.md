@@ -54,3 +54,20 @@ List manual steps required for environments and deployments.
   - Rollback:
     - Revert to previous deployment in Vercel.
     - Disable production domain if critical.
+- Environment: prod (GCP Cloud Run)
+  - Owner: TBD
+  - Prerequisites: GCP project, Cloud Run enabled, gcloud CLI authenticated
+  - Steps:
+    - Enable Cloud Run + Cloud Build APIs for the project.
+    - Configure `DATABASE_URL`, `NEXTAUTH_SECRET`, `NEXTAUTH_URL`, and OAuth secrets in GCP (Secret Manager or env vars).
+    - Ensure `gcloud auth login` + `gcloud config set project` are done.
+    - Deploy using `scripts/deploy.sh` and choose **GCP Cloud Run**.
+    - Optional: provide `GCP_ENV_FILE` for environment variables and `GCP_SECRETS` for Secret Manager bindings.
+    - Map custom domain in Cloud Run if needed.
+  - Verification:
+    - Access public and admin pages in production.
+    - Run a booking flow and confirm email delivery.
+    - Sign in to `/[locale]/admin/login`.
+  - Rollback:
+    - Roll back to the previous revision in Cloud Run.
+    - Disable custom domain routing if critical.

@@ -54,3 +54,20 @@ Liệt kê các bước thiết lập thủ công cho môi trường và triển
   - Rollback:
     - Revert về bản deploy trước đó trên Vercel.
     - Tắt domain production nếu gặp sự cố nghiêm trọng.
+- Môi trường: prod (GCP Cloud Run)
+  - Owner: TBD
+  - Prerequisites: dự án GCP, bật Cloud Run, gcloud CLI đã đăng nhập
+  - Steps:
+    - Bật API Cloud Run + Cloud Build cho dự án.
+    - Cấu hình `DATABASE_URL`, `NEXTAUTH_SECRET`, `NEXTAUTH_URL` và OAuth secrets trong GCP (Secret Manager hoặc env vars).
+    - Đảm bảo `gcloud auth login` + `gcloud config set project`.
+    - Deploy bằng `scripts/deploy.sh` và chọn **GCP Cloud Run**.
+    - Tuỳ chọn: dùng `GCP_ENV_FILE` cho env vars và `GCP_SECRETS` cho Secret Manager bindings.
+    - Map domain tuỳ chỉnh trong Cloud Run nếu cần.
+  - Verification:
+    - Truy cập trang public và trang admin ở production.
+    - Chạy thử booking và xác nhận email gửi thành công.
+    - Đăng nhập `/[locale]/admin/login`.
+  - Rollback:
+    - Rollback về revision trước trong Cloud Run.
+    - Tắt routing domain tuỳ chỉnh nếu gặp sự cố nghiêm trọng.
