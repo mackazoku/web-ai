@@ -78,7 +78,7 @@ const buildTimeSlots = () => {
 
 const buildTimeMarkers = (totalSlots: number) => {
   const markers: Array<{label: string; startSlot: number; spanSlots: number}> = [];
-  const stepHours = 1;
+  const stepHours = 2;
   const stepSlots = (stepHours * 60) / calendarSlotMinutes;
   for (let hour = calendarStartHour; hour <= calendarEndHour - 1; hour += stepHours) {
     const startSlot = (hour - calendarStartHour) * (60 / calendarSlotMinutes);
@@ -168,7 +168,7 @@ export default async function AdminPage({searchParams}: AdminPageProps) {
 
   return (
     <main className="min-h-screen bg-[#f6f2ea] text-neutral-900">
-      <div className="mx-auto grid w-full max-w-[1400px] gap-10 px-6 py-10 lg:grid-cols-[260px_1fr]">
+      <div className="mx-auto grid w-full max-w-none gap-10 px-32 py-10 sm:px-40 lg:grid-cols-[260px_1fr] lg:px-56 xl:px-64">
         <aside className="flex flex-col justify-between rounded-3xl border border-neutral-200 bg-white/80 p-6 shadow-[0_24px_70px_-55px_rgba(0,0,0,0.45)]">
           <div className="space-y-6">
             <div>
@@ -279,14 +279,14 @@ export default async function AdminPage({searchParams}: AdminPageProps) {
             <section className="space-y-6">
               <div className="flex items-center justify-between">
                 <h2 className={`${playfair.className} text-2xl`}>{t('schedule.title')}</h2>
-                <div className="flex items-center gap-3 text-xs text-neutral-500">
+                <div className="flex items-center gap-2 text-xs text-neutral-400">
                   <Link
-                    className="rounded-full border border-neutral-200 px-3 py-1"
+                    className="p-2 text-neutral-400 transition-colors hover:text-olive-700"
                     href={`/${locale}/admin?date=${formatDateParam(prevDate)}`}
                   >
                     {'<'}
                   </Link>
-                  <span>
+                  <span className="py-2 text-sm font-medium text-neutral-700">
                     {new Intl.DateTimeFormat(locale, {
                       year: 'numeric',
                       month: 'long',
@@ -294,16 +294,16 @@ export default async function AdminPage({searchParams}: AdminPageProps) {
                     }).format(new Date(dashboard.schedule.date))}
                   </span>
                   <Link
-                    className="rounded-full border border-neutral-200 px-3 py-1"
+                    className="p-2 text-neutral-400 transition-colors hover:text-olive-700"
                     href={`/${locale}/admin?date=${formatDateParam(nextDate)}`}
                   >
                     {'>'}
                   </Link>
                 </div>
               </div>
-              <div className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-[0_20px_60px_-45px_rgba(0,0,0,0.35)]">
+              <div className="rounded-2xl bg-[#f4f3f2] p-1 shadow-[0_20px_60px_-45px_rgba(0,0,0,0.35)]">
                 <div
-                  className="grid text-xs uppercase tracking-[0.2em] text-neutral-400"
+                  className="grid border-b border-neutral-300/30 px-4 py-4 text-[10px] uppercase tracking-[0.2em] text-neutral-400"
                   style={{
                     gridTemplateColumns: `150px repeat(${scheduleTimes.length}, minmax(0, 1fr))`,
                   }}
@@ -321,10 +321,12 @@ export default async function AdminPage({searchParams}: AdminPageProps) {
                     </span>
                   ))}
                 </div>
-                <div className="mt-6 space-y-4">
-                  {dashboard.schedule.rows.map((row) => (
+                <div className="space-y-0">
+                  {dashboard.schedule.rows.map((row, rowIndex) => (
                     <div
-                      className="grid items-center gap-2"
+                      className={`grid items-center px-4 py-6 ${
+                        rowIndex % 2 === 1 ? 'bg-white' : ''
+                      }`}
                       key={row.key}
                       style={{
                         gridTemplateColumns: `150px repeat(${scheduleTimes.length}, minmax(0, 1fr))`,
@@ -333,19 +335,28 @@ export default async function AdminPage({searchParams}: AdminPageProps) {
                       <div className="text-sm font-semibold text-neutral-700">
                         {row.label}
                       </div>
-                      {row.blocks.map((block) => {
+                      {row.blocks.map((block, blockIndex) => {
                         const range = getColumnRange(block.startAt, block.endAt);
                         if (!range) {
                           return null;
                         }
+                        const variant = blockIndex % 3;
+                        const palette =
+                          variant === 0
+                            ? 'bg-olive-100 text-olive-800 border-olive-600'
+                            : variant === 1
+                            ? 'bg-emerald-100 text-emerald-800 border-emerald-600'
+                            : 'bg-amber-100 text-amber-900 border-amber-600';
                         return (
                           <div
-                            className="min-w-0 rounded-2xl border border-olive-200 bg-olive-100 px-3 py-2 text-[0.7rem] text-olive-900 shadow-sm"
+                            className={`min-w-0 rounded-xl border-l-4 px-3 py-3 text-[0.7rem] ${palette}`}
                             key={block.key}
                             style={{gridColumn: `${range.gridStart} / ${range.gridEnd}`}}
                           >
-                            <div className="truncate font-semibold">{block.label}</div>
-                            <div className="text-[0.65rem] text-olive-700">
+                            <div className="truncate whitespace-nowrap font-semibold">
+                              {block.label}
+                            </div>
+                            <div className="truncate whitespace-nowrap text-[0.65rem] italic opacity-70">
                               {block.staffName} · {block.time}
                             </div>
                           </div>

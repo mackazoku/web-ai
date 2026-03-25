@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import {Playfair_Display} from 'next/font/google';
 import {getLocale, getTranslations} from 'next-intl/server';
@@ -12,11 +13,23 @@ const playfair = Playfair_Display({
 export default async function HomePage() {
   const t = await getTranslations('PublicHome');
   const locale = await getLocale();
+  const heroImage =
+    'https://lh3.googleusercontent.com/aida-public/AB6AXuD6LaCEzKICKOIf-ZcujBCCwxEyC2V7pM-35Qy7PfhbC64UTior8SZdc1jtpIaeIfKyTpAs1-wN8Xx5g6JwUN9fJc-b8oXhzfNTg2ORzF8DY5bFHkCpxA1mswmMyyFTkul3Z_ETiPT8vC_-3GCmHL7SO2v-fII7I4JQVIWKei3uX0OEs0DMWYFfK0MfgUTwGiO9cYkvt3sAbjzCkjFpnuBTDK0loEeQ8PUrIbhWCTafcZDar2kYuiGsCYw3noM_XyBO7LoOMBJYL571';
+  const storyImage =
+    'https://lh3.googleusercontent.com/aida-public/AB6AXuAKtTiZrCi9aB5Ba20GmB3esI0Sc9t_X1LkedJ97vT1mr4IInF-9hePT7RYfJ_2BAEjODVpdGifgYXeJNUOxgN5FPNaNFH3oEKxQS3nuBF-XqNEZ92Gh3sLITXgov_wPWLmOBZuHB5oD2Afly4xb0ZJOujqHDyAKsImc0GM-Npp1FtEWJbSnB6S89hSlPneJGojWwcmeeixKrw2oMZd6Vdc7_ifVzyxYjwnsdvZNEvQknkuRtzeDM5QGXiEADkyvwKK6L06vjColGRF';
+  const seasonalImages: Record<string, string> = {
+    signature:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuA6QbIyxEmMJ0u614H32oKrjDtyt7a_MsUH1G-SgWbMszpVLVfZJfX9MSZ0BYAnsd12CdLJekBTxxlSOIOq0InFxlFDyvkoYq91gDj_KN2kNkQ6Z9Bz7mhX_oeZ1e5gRIL8nvzcDUf4aDeVESZ4EgELlmWo3esZRA8r0a1fRNkFWqenRt-H_tyw5lf_TSo7bh_orle9k-_tyKxhb8EqHIDR2YhmFR_PpTqPtkfFlzpULBeD6EZ6x-UrfAeNAYyq5nL6qERWMuvrp30k',
+    botanical:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuBaw7dyp4LrodvdpoZ6MPwBoK5POL0Pgu7KgDQWOYqWOvJugfgYWF6bP54-jCvlpducGWY8A40IyJlc7MWIh0uzMsOZWQeXqW0nrWsQGUE1DEhcJELq3063ejxRhuMm7OS6_Xmu5eaV2DbFQne2SPLr0z5mq-dMFrlFoUTqAcCoj9KYnTBupputLD9NzMnGgLIFUxTl3cqFEUc4FCC94GTGx79xdjlM2JDO0j7Ei60i_5Ci2pECeXLDk69rVuUu4RJLenc2qZt3Bccb',
+    volcanic:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuBtMEQTUEYOU-Qchi0XDXzEap1N0B4NsqlPmTIMqo6knwkUCpY4umRJD9YB-ytf85mAHHhSB5736Cte7dE5JAevinz3Tu3tqvqWwrIh5ny__UuyDR1pzy4uMgmVWkVUKf-hQ-ist1LAiCfYNgo7LRHLtdpENBViiEpleSrn49GqYrzuCF0ivVEyF1VBo58ocFH5fIFXn_RpKyUFivakR7BKbFXSgWSrjDVUMGrxDDLOCigPArnF9WAQvUrAqt__mU1ftG8dqsMGaCoO',
+  };
 
   return (
     <main className="min-h-screen bg-[#f6f2ea] text-neutral-900">
       <header className="border-b border-neutral-200 bg-white/70">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 text-sm uppercase tracking-[0.25em] text-neutral-500">
+        <div className="mx-auto flex w-full max-w-none items-center justify-between px-32 py-5 text-sm uppercase tracking-[0.25em] text-neutral-500 sm:px-40 lg:px-56 xl:px-64">
           <span>{t('brand')}</span>
           <nav className="hidden items-center gap-8 text-[0.7rem] font-semibold text-neutral-500 md:flex">
             <span>{t('nav.services')}</span>
@@ -32,35 +45,47 @@ export default async function HomePage() {
         </div>
       </header>
 
-      <section className="mx-auto max-w-6xl px-6 pb-20 pt-14">
-        <div className="grid gap-12 lg:grid-cols-[1.15fr_1fr]">
-          <div className="flex flex-col gap-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-neutral-500">
-              {t('hero.kicker')}
-            </p>
-            <h1 className={`${playfair.className} text-4xl leading-tight md:text-6xl`}>
-              {t('hero.title')} <span className="text-olive-800">{t('hero.emphasis')}</span>
-            </h1>
-            <p className="max-w-xl text-lg text-neutral-600">{t('hero.subtitle')}</p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                className="rounded-full bg-olive-700 px-6 py-3 text-sm font-semibold text-white"
-                href={`/${locale}/booking`}
-              >
-                {t('hero.primaryCta')}
-              </Link>
-              <button className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-700">
-                {t('hero.secondaryCta')}
-              </button>
+      <section className="relative flex min-h-[820px] items-center overflow-hidden px-32 pb-20 pt-20 sm:px-40 lg:px-56 xl:px-64">
+        <div className="absolute inset-y-0 left-32 right-32 sm:left-40 sm:right-40 lg:left-56 lg:right-56 xl:left-64 xl:right-64">
+          <Image
+            alt={t('hero.imageAlt')}
+            className="object-cover"
+            fill
+            priority
+            sizes="100vw"
+            src={heroImage}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#faf9f8]/90 via-[#faf9f8]/40 to-transparent" />
+        </div>
+        <div className="mx-auto w-full max-w-none px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="relative grid gap-12 md:grid-cols-2">
+            <div className="flex flex-col gap-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-neutral-500">
+                {t('hero.kicker')}
+              </p>
+              <h1 className={`${playfair.className} text-4xl leading-tight md:text-6xl`}>
+                {t('hero.title')}{' '}
+                <span className="italic text-olive-700">{t('hero.emphasis')}</span>
+              </h1>
+              <p className="max-w-xl text-lg text-neutral-600">{t('hero.subtitle')}</p>
+              <div className="flex flex-wrap items-center gap-5">
+                <Link
+                  className="rounded-full bg-olive-700 px-8 py-4 text-sm font-semibold text-white shadow-[0_20px_50px_-30px_rgba(83,100,65,0.6)]"
+                  href={`/${locale}/booking`}
+                >
+                  {t('hero.primaryCta')}
+                </Link>
+                <button className="flex items-center gap-2 border-b-2 border-olive-200 pb-1 text-sm font-semibold text-olive-700">
+                  {t('hero.secondaryCta')}
+                </button>
+              </div>
             </div>
-          </div>
-          <div className="rounded-[32px] bg-[linear-gradient(135deg,#cfc6b7,#efe9dd)] p-6 shadow-[0_30px_80px_-50px_rgba(0,0,0,0.5)]">
-            <div className="h-72 w-full rounded-[28px] bg-[radial-gradient(circle_at_top,_#d8c9b2,_#b79f84)]" />
+            <div className="hidden md:block" />
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 pb-16">
+      <section className="mx-auto w-full max-w-none px-32 pb-16 sm:px-40 lg:px-56 xl:px-64">
         <div className="text-center">
           <h2 className={`${playfair.className} text-3xl md:text-4xl`}>{t('disciplines.title')}</h2>
           <p className="mt-2 text-sm text-neutral-600">{t('disciplines.subtitle')}</p>
@@ -85,7 +110,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 pb-20">
+      <section className="mx-auto w-full max-w-none px-32 pb-20 sm:px-40 lg:px-56 xl:px-64">
         <div className="flex items-center justify-between">
           <h2 className={`${playfair.className} text-3xl md:text-4xl`}>{t('seasonal.title')}</h2>
           <button className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
@@ -98,7 +123,16 @@ export default async function HomePage() {
               className="rounded-3xl border border-neutral-200 bg-white shadow-[0_20px_60px_-45px_rgba(0,0,0,0.35)]"
               key={item.key}
             >
-              <div className="h-40 rounded-t-3xl bg-[linear-gradient(135deg,#cdb9a0,#efe7d7)]" />
+              <div className="relative h-40 overflow-hidden rounded-t-3xl bg-neutral-100">
+                <Image
+                  alt={t(`seasonal.items.${item.key}.imageAlt`)}
+                  className="object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 320px"
+                  src={seasonalImages[item.key] ?? heroImage}
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(140deg,rgba(250,249,248,0.6),rgba(255,255,255,0.05))]" />
+              </div>
               <div className="p-5">
                 <div className="text-xs uppercase tracking-[0.3em] text-olive-700">
                   {t('seasonal.tag')}
@@ -121,7 +155,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 pb-16">
+      <section className="mx-auto w-full max-w-none px-32 pb-16 sm:px-40 lg:px-56 xl:px-64">
         <div className="rounded-[32px] border border-neutral-200 bg-white px-6 py-8 shadow-[0_24px_70px_-55px_rgba(0,0,0,0.35)] md:px-10">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
@@ -149,7 +183,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 pb-16">
+      <section className="mx-auto w-full max-w-none px-32 pb-16 sm:px-40 lg:px-56 xl:px-64">
         <div className="grid gap-8 rounded-[32px] bg-white px-8 py-10 shadow-[0_30px_80px_-55px_rgba(0,0,0,0.4)] lg:grid-cols-[1.1fr_1fr]">
           <div className="flex flex-col gap-4">
             <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">{t('story.kicker')}</p>
@@ -164,11 +198,21 @@ export default async function HomePage() {
               ))}
             </div>
           </div>
-          <div className="rounded-3xl bg-[linear-gradient(135deg,#bda78f,#f1e7d8)]" />
+          <div className="relative overflow-hidden rounded-3xl bg-neutral-100">
+            <Image
+              alt={t('story.imageAlt')}
+              className="object-cover"
+              fill
+              sizes="(max-width: 1024px) 100vw, 520px"
+              src={storyImage}
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(150deg,rgba(250,249,248,0.55),rgba(255,255,255,0.05))]" />
+            <div className="absolute -bottom-12 right-0 h-48 w-48 rounded-full bg-olive-200/30 blur-3xl" />
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 pb-16 text-center">
+      <section className="mx-auto w-full max-w-none px-32 pb-16 text-center sm:px-40 lg:px-56 xl:px-64">
         <p className={`${playfair.className} text-xl text-neutral-700 md:text-2xl`}>
           {t('testimonial.quote')}
         </p>
@@ -177,7 +221,7 @@ export default async function HomePage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 pb-20">
+      <section className="mx-auto w-full max-w-none px-32 pb-20 sm:px-40 lg:px-56 xl:px-64">
         <div className="rounded-[32px] bg-olive-800 px-8 py-10 text-white">
           <h3 className={`${playfair.className} text-3xl`}>{t('newsletter.title')}</h3>
           <p className="mt-2 text-sm text-olive-100">{t('newsletter.subtitle')}</p>

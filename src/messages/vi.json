@@ -196,7 +196,8 @@
       "emphasis": "trạng thái tự nhiên",
       "subtitle": "Không gian an trú được tuyển chọn cho nghỉ sâu và hồi phục thân tâm. Trải nghiệm nghi thức an yên cùng chăm sóc cao cấp.",
       "primaryCta": "Đặt lịch ngay",
-      "secondaryCta": "Khám phá nghi thức"
+      "secondaryCta": "Khám phá nghi thức",
+      "imageAlt": "Không gian spa yên tĩnh với ánh sáng tự nhiên và chất liệu đá."
     },
     "disciplines": {
       "title": "Các nghi thức chọn lọc",
@@ -231,9 +232,18 @@
       "rating": "Đánh giá {rating}",
       "book": "Đặt lịch",
       "items": {
-        "signature": {"title": "Chữ ký Sanctuary"},
-        "botanical": {"title": "Facial Thảo Mộc"},
-        "volcanic": {"title": "Ủ khoáng núi lửa"}
+        "signature": {
+          "title": "Chữ ký Sanctuary",
+          "imageAlt": "Phòng spa với khăn linen mềm và điểm nhấn tre nứa."
+        },
+        "botanical": {
+          "title": "Facial Thảo Mộc",
+          "imageAlt": "Trà thảo mộc và tinh dầu trên khay gỗ."
+        },
+        "volcanic": {
+          "title": "Ủ khoáng núi lửa",
+          "imageAlt": "Liệu trình bùn khoáng với chất liệu linen ấm."
+        }
       }
     },
     "branch": {
@@ -247,6 +257,7 @@
       "kicker": "Tôn chỉ",
       "title": "Nghệ thuật tận hưởng có ý thức",
       "body": "Nghi thức cá nhân hóa giúp cân bằng năng lượng, cơ thể và nội tâm.",
+      "imageAlt": "Người sáng lập chuẩn bị tinh dầu hữu cơ trong không gian ngập nắng.",
       "stats": {
         "years": "Năm chăm sóc",
         "rituals": "Nghi thức hữu cơ",

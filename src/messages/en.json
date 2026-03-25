@@ -196,7 +196,8 @@
       "emphasis": "natural state",
       "subtitle": "A curated sanctuary designed for deep rest and somatic healing. Experience the rituals of calm with our premium care.",
       "primaryCta": "Book now",
-      "secondaryCta": "Explore rituals"
+      "secondaryCta": "Explore rituals",
+      "imageAlt": "Serene spa interior with soft natural light and stone textures."
     },
     "disciplines": {
       "title": "Curated disciplines",
@@ -231,9 +232,18 @@
       "rating": "Rating {rating}",
       "book": "Book",
       "items": {
-        "signature": {"title": "The Sanctuary Signature"},
-        "botanical": {"title": "Botanical Facial"},
-        "volcanic": {"title": "Volcanic Clay Wrap"}
+        "signature": {
+          "title": "The Sanctuary Signature",
+          "imageAlt": "Peaceful spa room with soft linens and bamboo accents."
+        },
+        "botanical": {
+          "title": "Botanical Facial",
+          "imageAlt": "Herbal tea and essential oils on a wooden tray."
+        },
+        "volcanic": {
+          "title": "Volcanic Clay Wrap",
+          "imageAlt": "Luxury mud mask ritual with warm linen textures."
+        }
       }
     },
     "branch": {
@@ -247,6 +257,7 @@
       "kicker": "Our ethos",
       "title": "The art of conscious indulgence",
       "body": "Personalized rituals designed to recalibrate energy, balance the body, and restore inner calm.",
+      "imageAlt": "Spa founder preparing organic oils in a sunlit atelier.",
       "stats": {
         "years": "Years of care",
         "rituals": "Organic rituals",

@@ -1,67 +1,367 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Public Landing Mock</title>
-    <style>
-      :root { --bg: #f7f3ee; --olive: #5f6b4a; --muted: #7b746b; --border: #e5dfd4; }
-      * { box-sizing: border-box; }
-      body { margin: 0; font-family: "Georgia", serif; background: var(--bg); color: #1e1a16; }
-      header { padding: 28px 64px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
-      nav { display: flex; gap: 24px; font-family: "Inter", sans-serif; color: var(--muted); font-size: 14px; }
-      .hero { padding: 64px; background: #efe9df; display: grid; gap: 18px; }
-      .hero h1 { font-size: 48px; margin: 0; }
-      .cta { display: flex; gap: 12px; font-family: "Inter", sans-serif; }
-      .btn { padding: 12px 22px; border-radius: 12px; border: 1px solid var(--border); }
-      .btn.primary { background: var(--olive); color: #fff; border-color: transparent; }
-      .section { padding: 52px 64px; }
-      .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-      .card { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 18px; }
-      .footer { padding: 40px; text-align: center; color: var(--muted); font-family: "Inter", sans-serif; }
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&amp;family=Manrope:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#faf9f8",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-fixed": "#151e14",
+              "tertiary-container": "#a2ac9d",
+              "on-surface-variant": "#44483f",
+              "secondary": "#625e55",
+              "surface-container-low": "#f4f3f2",
+              "on-error-container": "#93000a",
+              "inverse-on-surface": "#f1f0f0",
+              "primary-container": "#9caf87",
+              "tertiary-fixed": "#dbe6d5",
+              "primary": "#536441",
+              "surface": "#faf9f8",
+              "on-secondary": "#ffffff",
+              "on-tertiary-container": "#374035",
+              "error": "#ba1a1a",
+              "surface-tint": "#536441",
+              "surface-container": "#eeeeed",
+              "outline-variant": "#c5c8bc",
+              "on-background": "#1a1c1c",
+              "on-primary-fixed-variant": "#3c4c2b",
+              "outline": "#75786e",
+              "on-surface": "#1a1c1c",
+              "primary-fixed": "#d6e9bd",
+              "secondary-fixed": "#e8e2d6",
+              "on-primary-fixed": "#111f05",
+              "on-error": "#ffffff",
+              "surface-dim": "#dadad9",
+              "primary-fixed-dim": "#bacda3",
+              "surface-variant": "#e3e2e1",
+              "inverse-primary": "#bacda3",
+              "inverse-surface": "#2f3130",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#1e1c14",
+              "on-primary-container": "#334223",
+              "surface-container-high": "#e9e8e7",
+              "on-secondary-fixed-variant": "#4a473e",
+              "tertiary-fixed-dim": "#bfc9ba",
+              "on-tertiary-fixed-variant": "#40493e",
+              "secondary-container": "#e8e2d6",
+              "secondary-fixed-dim": "#cbc6ba",
+              "error-container": "#ffdad6",
+              "background": "#faf9f8",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#e3e2e1",
+              "on-secondary-container": "#68645b",
+              "tertiary": "#576154"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .font-serif { font-family: 'Newsreader', serif; }
+      .bg-hero-gradient {
+        background: linear-gradient(135deg, rgba(83, 100, 65, 0.1) 0%, rgba(156, 175, 135, 0.05) 100%);
+      }
+      .cta-gradient {
+        background: linear-gradient(135deg, #536441 0%, #9caf87 100%);
+      }
     </style>
-  </head>
-  <body>
-    <header>
-      <div style="font-weight:600;">The Sanctuary</div>
-      <nav>
-        <div>Services</div>
-        <div>About</div>
-        <div>History</div>
-      </nav>
-    </header>
-    <section class="hero">
-      <div style="letter-spacing:.2em; font-family: 'Inter', sans-serif; font-size:12px; color: var(--muted);">WELCOME TO THE EDITORIAL ATELIER</div>
-      <h1>Restore your natural state.</h1>
-      <p style="max-width:520px; color: var(--muted);">A curated sanctuary designed for deep rest and somatic healing.</p>
-      <div class="cta">
-        <div class="btn primary">Book Now</div>
-        <div class="btn">Explore Rituals</div>
-      </div>
-    </section>
-    <section class="section">
-      <h2>Curated Disciplines</h2>
-      <div class="grid">
-        <div class="card">Deep Tissue Rituals</div>
-        <div class="card">Skin Apothecary</div>
-        <div class="card">Guided Stillness</div>
-      </div>
-    </section>
-    <section class="section">
-      <h2>Seasonal Selections</h2>
-      <div class="grid">
-        <div class="card">The Sanctuary Signature</div>
-        <div class="card">Botanical Facial</div>
-        <div class="card">Volcanic Clay Wrap</div>
-      </div>
-    </section>
-    <section class="section" style="background:#ede7dd;">
-      <h2>Stay in Flow</h2>
-      <div class="card" style="margin-top:16px; display:flex; justify-content:space-between; align-items:center;">
-        <div>Join our newsletter</div>
-        <div class="btn primary">Subscribe</div>
-      </div>
-    </section>
-    <div class="footer">THE EDITORIAL SANCTUARY</div>
-  </body>
-</html>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#faf9f8]/80 dark:bg-[#1a1c1c]/80 backdrop-blur-xl shadow-[0_32px_32px_-4px_rgba(26,28,28,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-none w-full font-['Newsreader'] tracking-wide">
+<div class="text-2xl font-serif italic text-[#536441] dark:text-[#bacda3]">
+                The Sanctuary
+            </div>
+<div class="hidden md:flex space-x-12 items-center">
+<a class="text-[#75786e] dark:text-[#c5c8bc] hover:text-[#536441] transition-colors duration-300" href="#">Services</a>
+<a class="text-[#75786e] dark:text-[#c5c8bc] hover:text-[#536441] transition-colors duration-300" href="#">About</a>
+<a class="text-[#75786e] dark:text-[#c5c8bc] hover:text-[#536441] transition-colors duration-300" href="#">History</a>
+</div>
+<div class="flex items-center space-x-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="bg-surface-container-low border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-1 focus:ring-primary w-64" placeholder="Search rituals..." type="text"/>
+</div>
+<button class="text-[#536441] dark:text-[#9caf87] scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined text-3xl" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="serene high-end spa interior with soft natural light stone textures and minimalist wooden elements creating a peaceful atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6LaCEzKICKOIf-ZcujBCCwxEyC2V7pM-35Qy7PfhbC64UTior8SZdc1jtpIaeIfKyTpAs1-wN8Xx5g6JwUN9fJc-b8oXhzfNTg2ORzF8DY5bFHkCpxA1mswmMyyFTkul3Z_ETiPT8vC_-3GCmHL7SO2v-fII7I4JQVIWKei3uX0OEs0DMWYFfK0MfgUTwGiO9cYkvt3sAbjzCkjFpnuBTDK0loEeQ8PUrIbhWCTafcZDar2kYuiGsCYw3noM_XyBO7LoOMBJYL571"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface/90 via-surface/40 to-transparent"></div>
+</div>
+<div class="container mx-auto px-8 relative z-10 grid md:grid-cols-2 gap-12">
+<div class="max-w-xl">
+<span class="text-primary font-label tracking-[0.2em] text-sm uppercase mb-6 block">Welcome to the Ethereal Atelier</span>
+<h1 class="font-serif text-6xl md:text-8xl text-on-surface leading-[1.1] mb-8">Restore your <br/><span class="italic text-primary-fixed-dim">natural state.</span></h1>
+<p class="text-on-surface-variant text-lg md:text-xl font-light leading-relaxed mb-10 max-w-md">
+                        A curated sanctuary designed for digital detox and somatic healing. Experience the intersection of ancient wisdom and modern tranquility.
+                    </p>
+<div class="flex items-center space-x-6">
+<button class="cta-gradient text-on-primary px-10 py-5 rounded-xl font-medium shadow-2xl shadow-primary/20 hover:scale-105 transition-transform">
+                            Book Now
+                        </button>
+<button class="text-primary font-medium flex items-center space-x-2 border-b-2 border-primary-container pb-1 hover:border-primary transition-all">
+<span>Explore Rituals</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Categories - Bento Grid style -->
+<section class="py-32 bg-surface">
+<div class="container mx-auto px-8">
+<div class="mb-20 text-center">
+<h2 class="font-serif text-5xl mb-4">Curated Disciplines</h2>
+<p class="text-outline max-w-lg mx-auto">Select a path toward restoration through our specialized treatment modalities.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+<!-- Massage -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low transition-all duration-500">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="close up of hot stones on back with aromatic oils and soft botanical environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU2U0PBMmSXKWSF6Vx1nrdiJil7Qtv02phPE_46TJAtq6hsyBPfjhS9nD65wiZnyDKzdjRYbopkthfW-5qtCokiHVVtmo0TUCMDv5v2g44E7bMIOsikx0nq-vhTItOlRuGqbessXCGdFAoJ2fdHRVyll1b29IWk94hjoGc6E75l7g_OB-xp95zTM4phzS8PTs-FkPg2wt1_MwNr2JvYXtazmnTtUWKLGaiyHTrce7BCqAO1XbbSna05FRHNw-SNiFTUmqJaoga6hP6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end p-12">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">spa</span>
+<h3 class="font-serif text-4xl mb-2">Deep Tissue Rituals</h3>
+<p class="text-on-surface-variant max-w-md">Release chronic tension through slow, deliberate strokes and focused pressure.</p>
+</div>
+</div>
+<!-- Facial -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high transition-all">
+<div class="absolute inset-0 flex items-center justify-center p-8 text-center flex-col h-full bg-secondary-container/30">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">face</span>
+<h3 class="font-serif text-3xl mb-2">Skin Apothecary</h3>
+<p class="text-on-secondary-fixed-variant text-sm px-4">Botanical infusions tailored to your skin's unique biological rhythm.</p>
+<button class="mt-6 text-primary font-bold text-xs tracking-widest uppercase">Learn More</button>
+</div>
+</div>
+<!-- Body Therapy -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container transition-all">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40" data-alt="natural organic spa products and sea salt in ceramic bowls on textured surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQRBOFLiCKXTewKtPalhuZq39iqiIsg6p2FifQD1JUPLbkOREOopXrDKG_w0_kPUSU-r7djwLY9vaKCyKM2kdZlJ57R1HqGYcw4oRBVZFyrRpM3QoVOpYwlFISSM_-2BmGlZpKW9CKA7KZSEaMjHOQw91DGcJ5HuLOtfz-ATvAU1nwmXmFYCgUUcwsbBKzHxa_Q7HKox5LYYVU2ToTF5MXo3p2n4WKVCDYh8oQ2d0eNBqET3PP2XkLtY35QXswQ4cRZmHzHq-6OuXf"/>
+<div class="relative h-full flex flex-col justify-center items-center p-8 text-center">
+<h3 class="font-serif text-3xl mb-2">Somatic Release</h3>
+<p class="text-on-surface-variant text-sm">Full-body detoxification using earth-derived minerals.</p>
+</div>
+</div>
+<!-- Yoga/Meditation -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-primary-container/20 transition-all">
+<div class="relative h-full flex items-center justify-between p-12">
+<div class="max-w-xs">
+<h3 class="font-serif text-4xl mb-4">Guided Stillness</h3>
+<p class="text-on-primary-container">Breathwork and meditation sessions in our climate-controlled zen garden.</p>
+</div>
+<span class="material-symbols-outlined text-8xl text-primary/20 absolute -right-4 -bottom-4 rotate-12">self_improvement</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Services -->
+<section class="py-32 bg-surface-container-low">
+<div class="container mx-auto px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+<div class="max-w-xl">
+<h2 class="font-serif text-5xl mb-4">Seasonal Selections</h2>
+<p class="text-outline">Our most requested treatments, curated for the current solar cycle.</p>
+</div>
+<a class="text-primary font-medium border-b border-primary/20 pb-1" href="#">View All Services</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Service Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="peaceful spa room with white linens and bamboo accents in soft evening light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6QbIyxEmMJ0u614H32oKrjDtyt7a_MsUH1G-SgWbMszpVLVfZJfX9MSZ0BYAnsd12CdLJekBTxxlSOIOq0InFxlFDyvkoYq91gDj_KN2kNkQ6Z9Bz7mhX_oeZ1e5gRIL8nvzcDUf4aDeVESZ4EgELlmWo3esZRA8r0a1fRNkFWqenRt-H_tyw5lf_TSo7bh_orle9k-_tyKxhb8EqHIDR2YhmFR_PpTqPtkfFlzpULBeD6EZ6x-UrfAeNAYyq5nL6qERWMuvrp30k"/>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary">
+                                REJUVENATING
+                            </div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-serif text-2xl">The Sanctuary Signature</h3>
+<div class="flex items-center text-primary-fixed-dim">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface ml-1">4.9</span>
+</div>
+</div>
+<div class="flex items-center space-x-4 text-outline text-sm mb-6">
+<span class="flex items-center"><span class="material-symbols-outlined text-base mr-1">schedule</span> 90 min</span>
+<span class="flex items-center"><span class="material-symbols-outlined text-base mr-1">payments</span> $240</span>
+</div>
+<button class="w-full py-4 border border-outline-variant hover:bg-primary hover:text-on-primary hover:border-primary transition-all rounded-xl font-medium">
+                                Reserve Experience
+                            </button>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="herbal tea and essential oils on a wooden tray with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaw7dyp4LrodvdpoZ6MPwBoK5POL0Pgu7KgDQWOYqWOvJugfgYWF6bP54-jCvlpducGWY8A40IyJlc7MWIh0uzMsOZWQeXqW0nrWsQGUE1DEhcJELq3063ejxRhuMm7OS6_Xmu5eaV2DbFQne2SPLr0z5mq-dMFrlFoUTqAcCoj9KYnTBupputLD9NzMnGgLIFUxTl3cqFEUc4FCC94GTGx79xdjlM2JDO0j7Ei60i_5Ci2pECeXLDk69rVuUu4RJLenc2qZt3Bccb"/>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary">
+                                ESSENTIAL
+                            </div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-serif text-2xl">Botanical Facial</h3>
+<div class="flex items-center text-primary-fixed-dim">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface ml-1">4.8</span>
+</div>
+</div>
+<div class="flex items-center space-x-4 text-outline text-sm mb-6">
+<span class="flex items-center"><span class="material-symbols-outlined text-base mr-1">schedule</span> 60 min</span>
+<span class="flex items-center"><span class="material-symbols-outlined text-base mr-1">payments</span> $185</span>
+</div>
+<button class="w-full py-4 border border-outline-variant hover:bg-primary hover:text-on-primary hover:border-primary transition-all rounded-xl font-medium">
+                                Reserve Experience
+                            </button>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="luxury mud mask application with soft linen textures and warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtMEQTUEYOU-Qchi0XDXzEap1N0B4NsqlPmTIMqo6knwkUCpY4umRJD9YB-ytf85mAHHhSB5736Cte7dE5JAevinz3Tu3tqvqWwrIh5ny__UuyDR1pzy4uMgmVWkVUKf-hQ-ist1LAiCfYNgo7LRHLtdpENBViiEpleSrn49GqYrzuCF0ivVEyF1VBo58ocFH5fIFXn_RpKyUFivakR7BKbFXSgWSrjDVUMGrxDDLOCigPArnF9WAQvUrAqt__mU1ftG8dqsMGaCoO"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-serif text-2xl">Volcanic Clay Wrap</h3>
+<div class="flex items-center text-primary-fixed-dim">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface ml-1">5.0</span>
+</div>
+</div>
+<div class="flex items-center space-x-4 text-outline text-sm mb-6">
+<span class="flex items-center"><span class="material-symbols-outlined text-base mr-1">schedule</span> 75 min</span>
+<span class="flex items-center"><span class="material-symbols-outlined text-base mr-1">payments</span> $210</span>
+</div>
+<button class="w-full py-4 border border-outline-variant hover:bg-primary hover:text-on-primary hover:border-primary transition-all rounded-xl font-medium">
+                                Reserve Experience
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Story / Philosophy -->
+<section class="py-32 overflow-hidden">
+<div class="container mx-auto px-8">
+<div class="grid md:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="w-4/5 aspect-[3/4] rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="spa founder or therapist preparing organic oils in a sunlit airy workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKtTiZrCi9aB5Ba20GmB3esI0Sc9t_X1LkedJ97vT1mr4IInF-9hePT7RYfJ_2BAEjODVpdGifgYXeJNUOxgN5FPNaNFH3oEKxQS3nuBF-XqNEZ92Gh3sLITXgov_wPWLmOBZuHB5oD2Afly4xb0ZJOujqHDyAKsImc0GM-Npp1FtEWJbSnB6S89hSlPneJGojWwcmeeixKrw2oMZd6Vdc7_ifVzyxYjwnsdvZNEvQknkuRtzeDM5QGXiEADkyvwKK6L06vjColGRF"/>
+</div>
+<div class="absolute -bottom-12 -right-12 w-3/5 aspect-square rounded-xl overflow-hidden shadow-2xl border-8 border-surface hidden lg:block">
+<img class="w-full h-full object-cover" data-alt="detailed close up of sage bundle and aromatic candles on a rough stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiP7dQygAV3ThxRTlA1-U8xWQ3KwafUy2-q9D7SE3pIqGdJiHDoqBwIjc75RxPvfw7YHvTc-3wwMX9tsGlwizX-f3a5pGR3Fh2Ao-TSeyb9ox6egxSunftx9rBgIYUJJfKlzMJ75_JnpoWYtib2MhhpyrL1wWBBob0mS3gxq5C4O_X_eN5LuKlSluyBXRIffYwLABwthBP3ck4gC3UisqPOSeu7xWbyV1zbHhYd4gRQoWCOjg-1y_tai1gBtRUOX8-WHX7JnrxLPRQ"/>
+</div>
+</div>
+<div>
+<span class="text-primary font-label tracking-[0.2em] text-sm uppercase mb-6 block">Our Ethos</span>
+<h2 class="font-serif text-5xl mb-8 leading-tight">The Art of <br/><span class="italic">Conscious Indulgence</span></h2>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-8">
+                            Founded in 1994, The Editorial Sanctuary began as a small apothecary in the high desert. We believe that true luxury is not defined by excess, but by the space and silence required to reconnect with one's soul.
+                        </p>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-10">
+                            Every ingredient we use is ethically wild-harvested or sourced from biodynamic farms. Our practitioners are artists of the body, trained to listen to what the muscle hides.
+                        </p>
+<div class="flex items-center space-x-12">
+<div>
+<span class="block text-4xl font-serif text-primary">28+</span>
+<span class="text-xs uppercase tracking-widest text-outline">Years of Peace</span>
+</div>
+<div>
+<span class="block text-4xl font-serif text-primary">100%</span>
+<span class="text-xs uppercase tracking-widest text-outline">Organic Labs</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-32 bg-secondary-container/20">
+<div class="container mx-auto px-8 max-w-4xl text-center">
+<span class="material-symbols-outlined text-6xl text-primary/30 mb-8">format_quote</span>
+<div class="space-y-8">
+<p class="font-serif text-3xl md:text-4xl italic leading-relaxed text-on-surface">
+                        "The Sanctuary is more than a spa; it's a recalibration of the spirit. I arrived feeling fragmented and left feeling like a whole person again. The attention to detail is breathtaking."
+                    </p>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full overflow-hidden mb-4 grayscale">
+<img class="w-full h-full object-cover" data-alt="portrait of a woman with a serene expression in natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_-xsztbA10QVnyuT2UzMVCkN3YYmaaLncceK99Zm24ocALaNLyKOJUo4u4_dEefPOJCMKDpgiJOZcwRLYsvjm0XPDvvEeoPhQESZ3Ag4JW8zPswLaI9dQ2mTzB85bkvHbhzAD5EtkkkcbkPLQzbIdw-kS497IP8uh4USi4hRKkO609La7Zvmyd4yBJDj5hfvXLbMpCOC0PbdXi0hkT5BnMQ_3psgolhg_qIj7ppHCmZ5JcTwU3hDSyEHaP5mHnesSF0N7k5xJxyfk"/>
+</div>
+<h4 class="font-serif text-xl">Elena V. Rostova</h4>
+<p class="text-xs uppercase tracking-[0.2em] text-outline mt-1">Creative Director, NY</p>
+</div>
+<div class="flex justify-center space-x-2 pt-8">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Newsletter -->
+<section class="py-32">
+<div class="container mx-auto px-8">
+<div class="bg-primary rounded-[2rem] p-12 md:p-24 text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="ethereal macro shot of forest leaves with soft morning dew" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCncIqEc304GQUNAeqaY3Lfvznf2S5BIzDPTF8naiVCy6wUxjCa9lpn9yaSjcA4W4jg3dgZzYQaduH0tB0GFzftTKdJ_54cct8QocmQnqvFYL1NVZTGB06nVoTY9Is3sogAoCt-gEMpG77hOrYB4t41qEoK0VgZbocHgNcl2RgiIWV58hLxC_ICmd6VK_894cnmZtQYTYf_lV2eCiAxTJwQZNkBfH1tOzx49YbsrHxNxTOfGAKMt6khrbKs2iXZLfD8D5U5VBhi3scz"/>
+</div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-serif text-4xl md:text-6xl text-on-primary mb-6">Stay in Flow</h2>
+<p class="text-on-primary/80 mb-10 text-lg">Join our inner circle for monthly wellness essays, seasonal ritual guides, and priority booking windows.</p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-grow bg-white/10 border-white/20 text-on-primary placeholder:text-on-primary/40 rounded-xl px-6 py-4 focus:ring-1 focus:ring-white" placeholder="email@example.com" type="email"/>
+<button class="bg-surface-container-lowest text-primary px-10 py-4 rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-secondary-fixed transition-colors">
+                                Subscribe
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#c5c8bc]/15 bg-[#faf9f8] dark:bg-[#1a1c1c] font-['Manrope'] text-sm uppercase tracking-widest flex flex-col items-center justify-center py-16 px-4 space-y-6">
+<div class="text-lg font-serif italic text-[#536441] dark:text-[#9caf87]">
+            The Editorial Sanctuary
+        </div>
+<div class="flex flex-wrap justify-center gap-8 mb-4">
+<a class="text-[#75786e] hover:text-[#536441] dark:hover:text-[#ffffff] transition-all opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-[#75786e] hover:text-[#536441] dark:hover:text-[#ffffff] transition-all opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-[#75786e] hover:text-[#536441] dark:hover:text-[#ffffff] transition-all opacity-80 hover:opacity-100" href="#">Contact Us</a>
+</div>
+<div class="text-[#75786e] normal-case tracking-normal text-center max-w-md opacity-60 mb-4">
+<p>1242 Botanical Drive, High Desert, NM 87501</p>
+<p>Tel: +1 (505) 982-4412 • ritual@editorialsanctuary.com</p>
+</div>
+<div class="text-[#75786e] text-xs">
+            © 2024 The Editorial Sanctuary. All rights reserved.
+        </div>
+</footer>
+</body></html>
