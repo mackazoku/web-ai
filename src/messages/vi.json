@@ -339,6 +339,14 @@
       "error": "Đặt lịch thất bại. Vui lòng thử lại.",
       "invalid": "Vui lòng nhập đủ thông tin trước khi đặt lịch.",
       "submitting": "Đang xử lý..."
+    },
+    "successDialog": {
+      "title": "Đặt lịch thành công!",
+      "description": "Cảm ơn bạn đã tin tưởng The Sanctuary. Lịch hẹn đã được ghi nhận và email xác nhận sẽ được gửi đến bạn.",
+      "cta": "Xem lịch hẹn của tôi",
+      "dismiss": "Đóng",
+      "fallbackCta": "Đi tới lịch hẹn của tôi",
+      "fallbackHint": "Nếu chưa được chuyển tự động, hãy tiếp tục tại đây."
     }
   },
   "CustomerProfile": {

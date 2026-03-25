@@ -339,6 +339,14 @@
       "error": "Booking failed. Please try again.",
       "invalid": "Please complete your details before booking.",
       "submitting": "Processing..."
+    },
+    "successDialog": {
+      "title": "Booking confirmed!",
+      "description": "Thank you for trusting The Sanctuary. Your appointment is secured and a confirmation email is on the way.",
+      "cta": "View my bookings",
+      "dismiss": "Close",
+      "fallbackCta": "Go to my bookings",
+      "fallbackHint": "If you are not redirected automatically, continue below."
     }
   },
   "CustomerProfile": {

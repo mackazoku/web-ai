@@ -2,11 +2,12 @@
 
 import Link from 'next/link';
 import {Playfair_Display} from 'next/font/google';
-import {useEffect, useMemo, useState} from 'react';
-import {useParams} from 'next/navigation';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {useParams, useRouter} from 'next/navigation';
 import {useTranslations} from 'next-intl';
 
 import bookingData from '@/modules/public/data/booking.json';
+import BookingSuccessDialog from './booking-success-dialog';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -17,6 +18,7 @@ export default function BookingClient() {
   const t = useTranslations('Booking');
   const params = useParams<{locale: string}>();
   const locale = params.locale ?? 'en';
+  const router = useRouter();
   const summary = bookingData.summary;
   const [selectedService, setSelectedService] = useState(bookingData.services[0]?.key ?? '');
   const [selectedBranch, setSelectedBranch] = useState(bookingData.branches[0]?.key ?? '');
@@ -39,7 +41,11 @@ export default function BookingClient() {
   const [selectedTherapistId, setSelectedTherapistId] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [submitSuccess, setSubmitSuccess] = useState<string | null>(null);
+  const [successDialogOpen, setSuccessDialogOpen] = useState(false);
+  const [isRedirecting, setIsRedirecting] = useState(false);
+  const [redirectFailed, setRedirectFailed] = useState(false);
+  const autoAdvanceRef = useRef<number | null>(null);
+  const redirectTimeoutRef = useRef<number | null>(null);
 
   const serviceDetails = useMemo(
     () => bookingData.services.find((service) => service.key === selectedService),
@@ -131,7 +137,9 @@ export default function BookingClient() {
     }
     setIsSubmitting(true);
     setSubmitError(null);
-    setSubmitSuccess(null);
+    setSuccessDialogOpen(false);
+    setIsRedirecting(false);
+    setRedirectFailed(false);
 
     const durationMinutes = parseDurationMinutes(serviceDetails?.duration);
     const endAt = new Date(startAt.getTime() + durationMinutes * 60 * 1000);
@@ -164,12 +172,53 @@ export default function BookingClient() {
       }
       setSubmitError(`${t('submit.error')}${reason}`);
       setIsSubmitting(false);
+      setSuccessDialogOpen(false);
       return;
     }
 
-    setSubmitSuccess(t('submit.success'));
+    setSuccessDialogOpen(true);
     setIsSubmitting(false);
   };
+
+  const clearRedirectTimers = useCallback(() => {
+    if (autoAdvanceRef.current) {
+      window.clearTimeout(autoAdvanceRef.current);
+      autoAdvanceRef.current = null;
+    }
+    if (redirectTimeoutRef.current) {
+      window.clearTimeout(redirectTimeoutRef.current);
+      redirectTimeoutRef.current = null;
+    }
+  }, []);
+
+  const handleDialogConfirm = useCallback(() => {
+    if (isRedirecting) return;
+    clearRedirectTimers();
+    setIsRedirecting(true);
+    setRedirectFailed(false);
+    router.push(`/${locale}/bookings`);
+    redirectTimeoutRef.current = window.setTimeout(() => {
+      setRedirectFailed(true);
+      setIsRedirecting(false);
+    }, 3500);
+  }, [clearRedirectTimers, isRedirecting, locale, router]);
+
+  const handleDialogClose = useCallback(() => {
+    clearRedirectTimers();
+    setSuccessDialogOpen(false);
+    setIsRedirecting(false);
+    setRedirectFailed(false);
+  }, [clearRedirectTimers]);
+
+  useEffect(() => {
+    if (!successDialogOpen) return;
+    autoAdvanceRef.current = window.setTimeout(() => {
+      handleDialogConfirm();
+    }, 2000);
+    return () => {
+      clearRedirectTimers();
+    };
+  }, [clearRedirectTimers, handleDialogConfirm, successDialogOpen]);
 
   useEffect(() => {
     if (!branchLabel || !serviceLabel) {
@@ -205,14 +254,23 @@ export default function BookingClient() {
   }, [branchLabel, serviceLabel]);
 
   return (
-    <main className="min-h-screen bg-[#f6f2ea] px-6 py-10 text-neutral-900">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">
-        <header className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-neutral-500">
-          <span>{t('brand')}</span>
-          <Link className="text-[0.7rem] font-semibold" href={`/${locale}`}>
-            {t('cancel')}
-          </Link>
-        </header>
+    <>
+      <BookingSuccessDialog
+        open={successDialogOpen}
+        locale={locale}
+        onConfirm={handleDialogConfirm}
+        onClose={handleDialogClose}
+        showFallback={redirectFailed}
+        isRedirecting={isRedirecting}
+      />
+      <main className="min-h-screen bg-[#f6f2ea] px-6 py-10 text-neutral-900">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">
+          <header className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-neutral-500">
+            <span>{t('brand')}</span>
+            <Link className="text-[0.7rem] font-semibold" href={`/${locale}`}>
+              {t('cancel')}
+            </Link>
+          </header>
 
         <section className="flex flex-wrap items-center gap-4 text-xs uppercase tracking-[0.25em] text-neutral-500">
           <span className="font-semibold text-olive-700">{t('steps.service')}</span>
@@ -543,12 +601,6 @@ export default function BookingClient() {
               {submitError ? (
                 <p className="mt-4 text-xs font-semibold text-rose-600">{submitError}</p>
               ) : null}
-              {submitSuccess ? (
-                <p className="mt-4 text-xs font-semibold text-emerald-600">
-                  {submitSuccess}
-                </p>
-              ) : null}
-
               <button
                 className="mt-6 w-full rounded-full bg-olive-700 px-5 py-3 text-sm font-semibold text-white disabled:opacity-60"
                 disabled={isSubmitting}
@@ -570,7 +622,8 @@ export default function BookingClient() {
             </div>
           </aside>
         </section>
-      </div>
-    </main>
+        </div>
+      </main>
+    </>
   );
 }

@@ -29,3 +29,13 @@
   - New Google account creates a customer user
   - Existing customer email can sign in with Google
   - Cancelled OAuth shows a clear error and retry guidance
+
+## 2026-03-26 - Booking success dialog
+- executor: TBD
+- environment: local
+- result: pending
+- notes:
+  - Successful booking shows the success dialog overlay
+  - Primary CTA navigates to /[locale]/bookings
+  - Auto-advance redirects to bookings within a few seconds
+  - Simulated navigation failure shows a fallback CTA to bookings

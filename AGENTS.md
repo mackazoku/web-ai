@@ -311,9 +311,9 @@ If inconsistency exists:
 If documentation is unclear: STOP, clarify, update docs, then continue.
 
 ## Recent Changes
+- 004-booking-success: Added TypeScript 5, React 18, Next.js 14 (App Router) + NextAuth, next-intl, Prisma, Zod, React Query, Zustand
 - 003-google-login: Added TypeScript 5, React 18, Next.js 14 (App Router) + NextAuth, next-intl, Prisma, Zod, React Query, Zustand
 - 002-user-registration: Added TypeScript 5, React 18, Next.js 14 (App Router) + next-intl, NextAuth, Prisma, Zod, React Query, Zustand
-- 001-user-login-booking: Added TypeScript 5, React 18, Next.js 14 (App Router) + next-intl, NextAuth, Prisma, Zod, React Query, Zustand
 
 ## Active Technologies
 - TypeScript 5, React 18, Next.js 14 (App Router) + NextAuth, next-intl, Prisma, Zod, React Query, Zustand (003-google-login)
