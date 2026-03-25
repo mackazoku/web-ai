@@ -56,3 +56,13 @@ Ghi chú hành vi:
 - Validation phía client hiển thị lỗi trước khi submit.
 - Lỗi từ server hiển thị rõ (trùng email, dữ liệu không hợp lệ).
 - Đăng ký thành công chuyển sang login với callback về booking.
+
+### 5.5 Đăng nhập
+Vị trí: `src/app/[locale]/(public)/login/page.tsx`
+
+Ghi chú hành vi:
+- Vẫn hỗ trợ đăng nhập bằng email + mật khẩu.
+- Có nút đăng nhập Google trên màn login.
+- Google sign-in thành công sẽ quay lại trang đích ban đầu.
+- Lỗi OAuth hiển thị thông báo rõ ràng và hướng dẫn retry.
+- Có link đăng ký để chuyển sang tạo tài khoản.

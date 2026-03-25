@@ -5,7 +5,7 @@ Describe entities and relationships for the SPA booking system.
 
 ## 2. Core Entities
 - `User`
-  - id, name, email, phone, role, status, passwordHash, authProvider, branchId?, notes
+  - id, name, email, phone, role, status, passwordHash, authProvider (credentials/google), branchId?, notes
 - `CustomerAccount`
   - userId, phone, preferences
 - `StaffProfile`

@@ -5,7 +5,7 @@ Mô tả thực thể và quan hệ cho hệ thống đặt lịch SPA.
 
 ## 2. Thực thể chính
 - `User`
-  - id, name, email, phone, role, status, passwordHash, authProvider, branchId?, notes
+  - id, name, email, phone, role, status, passwordHash, authProvider (credentials/google), branchId?, notes
 - `CustomerAccount`
   - userId, phone, preferences
 - `StaffProfile`

@@ -55,6 +55,7 @@ graph LR
 - Chống spam cho booking công khai.
 - Route admin dưới `/[locale]/admin` được bảo vệ bởi layout guard dùng NextAuth session.
 - Credentials auth (email/password, bcrypt) kèm kiểm tra role cho tài khoản nhân viên.
+- Hỗ trợ Google OAuth cho đăng nhập khách hàng.
 - Role lấy từ trường `User.role`.
 - Trạng thái user (active/disabled) quyết định quyền truy cập.
 

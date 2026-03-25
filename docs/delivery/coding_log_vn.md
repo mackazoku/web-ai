@@ -10,6 +10,28 @@ Theo dõi lịch sử thực thi theo task, quyết định và ghi chú.
 - Ghi chú triển khai
 - Rủi ro / việc cần theo dõi
 
+### 2026-03-25 - Link chuyển sang đăng ký ở login
+- Phạm vi:
+  - Thêm link đăng ký trên màn login khách hàng để chuyển sang tạo tài khoản.
+- Quyết định:
+  - Giữ link đơn giản, không thay đổi flow đăng ký hiện có.
+- Ghi chú triển khai:
+  - Login hiện link tới `/[locale]/register`.
+- Rủi ro / theo dõi:
+  - Cân nhắc truyền callbackUrl nếu cần cho luồng sâu hơn.
+
+### 2026-03-25 - Đăng nhập Google khách hàng
+- Phạm vi:
+  - Thêm nút đăng nhập Google ở màn login khách hàng.
+  - Đồng bộ Google sign-in với tạo tài khoản khách hàng và gán role.
+  - Bổ sung xử lý lỗi OAuth và hướng dẫn fallback.
+- Quyết định:
+  - Liên kết Google account với customer theo email để tránh trùng.
+- Ghi chú triển khai:
+  - Google OAuth cần `GOOGLE_CLIENT_ID` và `GOOGLE_CLIENT_SECRET`.
+- Rủi ro / theo dõi:
+  - Xác nhận cấu hình Google OAuth ở production.
+
 ### 2026-03-25 - Luồng đăng ký khách hàng
 - Phạm vi:
   - Thêm màn hình đăng ký public và API đăng ký bằng email + mật khẩu.

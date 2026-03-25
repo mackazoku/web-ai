@@ -19,3 +19,13 @@
   - Duplicate email returns 409 with code email_exists
   - Invalid email or empty password returns 400 with code invalid_payload
   - User can sign in with new credentials and access booking flow
+
+## 2026-03-25 - Customer Google login
+- executor: TBD
+- environment: local
+- result: pending
+- notes:
+  - Google sign-in completes and redirects to booking
+  - New Google account creates a customer user
+  - Existing customer email can sign in with Google
+  - Cancelled OAuth shows a clear error and retry guidance

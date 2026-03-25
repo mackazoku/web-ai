@@ -56,3 +56,13 @@ Behavior notes:
 - Client-side validation shows inline error message before submission.
 - Server errors map to clear messages (duplicate email, invalid input).
 - Successful registration redirects to login with callback to booking.
+
+### 5.5 Login
+Location: `src/app/[locale]/(public)/login/page.tsx`
+
+Behavior notes:
+- Email + password login remains available.
+- Google sign-in button is visible on the login screen.
+- Google sign-in redirects back to the original destination after success.
+- OAuth errors show a clear, user-friendly message with retry guidance.
+- Provide a register link to switch to account creation.

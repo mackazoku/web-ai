@@ -3,12 +3,33 @@
 ## Scope
 Define verification strategy for implemented features.
 
+## Smoke Test (Quick Verification)
+Purpose: 3–5 minute check after deploy to confirm core flows are alive.
+
+Checklist:
+- Open `/[locale]/login` and confirm the page loads.
+- Verify login screen shows Google sign-in and register link.
+- Navigate to `/[locale]/register` and confirm form renders.
+- If OAuth configured: start Google sign-in and confirm redirect to callback.
+
 ## Execution Tracking
 - executor
 - executed_at (YYYY-MM-DD HH:mm)
 - environment
 - result (pass/fail/partial)
 - notes
+
+### 2026-03-25 12:40 (local)
+- executor: TBD
+- environment: local
+- result: partial
+- notes: Added customer Google login flow; tests not run yet.
+
+### 2026-03-25 12:55 (local)
+- executor: TBD
+- environment: local
+- result: partial
+- notes: Added register link on customer login screen; tests not run yet.
 
 ### 2026-03-19 23:58 (local)
 - executor: TBD

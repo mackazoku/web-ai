@@ -3,12 +3,33 @@
 ## Phạm vi
 Xác định chiến lược kiểm thử cho các tính năng đã triển khai.
 
+## Smoke Test (Kiểm tra nhanh)
+Mục đích: kiểm tra 3–5 phút sau deploy để chắc chắn luồng chính hoạt động.
+
+Checklist:
+- Mở `/[locale]/login` và xác nhận trang hiển thị.
+- Kiểm tra có nút Google sign-in và link đăng ký.
+- Mở `/[locale]/register` và xác nhận form hiển thị.
+- Nếu đã cấu hình OAuth: thử Google sign-in và kiểm tra redirect về callback.
+
 ## Theo dõi thực thi
 - executor
 - executed_at (YYYY-MM-DD HH:mm)
 - environment
 - result (pass/fail/partial)
 - notes
+
+### 2026-03-25 12:40 (local)
+- executor: TBD
+- environment: local
+- result: partial
+- notes: Đã thêm đăng nhập Google cho khách hàng; chưa chạy test.
+
+### 2026-03-25 12:55 (local)
+- executor: TBD
+- environment: local
+- result: partial
+- notes: Đã thêm link đăng ký trên màn login khách hàng; chưa chạy test.
 
 ### 2026-03-19 23:58 (local)
 - executor: TBD

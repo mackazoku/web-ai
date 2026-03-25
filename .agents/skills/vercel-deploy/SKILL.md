@@ -18,4 +18,5 @@ description: "Vercel deployment checklist and promotion rules."
 
 ## Post-Deploy
 - Confirm alias URL is updated.
+- Run a smoke test on critical public routes (login, register, booking).
 - Record deployment URL and time in delivery notes if required.

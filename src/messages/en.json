@@ -419,7 +419,16 @@
     "passwordLabel": "Password",
     "submit": "Sign in",
     "loading": "Signing in...",
-    "invalidCredentials": "Invalid email or password."
+    "invalidCredentials": "Invalid email or password.",
+    "googleButton": "Sign in with Google",
+    "googleLoading": "Redirecting to Google...",
+    "orDivider": "Or",
+    "oauthError": "Google sign-in failed. Please try again.",
+    "oauthAccountNotLinked": "This email is linked to another sign-in method.",
+    "oauthCancelled": "Google sign-in was cancelled.",
+    "oauthFallback": "You can try again or sign in with email and password.",
+    "registerPrompt": "New here?",
+    "registerCta": "Create an account"
   },
   "Register": {
     "badge": "Create account",

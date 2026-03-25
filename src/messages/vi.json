@@ -419,7 +419,16 @@
     "passwordLabel": "Mật khẩu",
     "submit": "Đăng nhập",
     "loading": "Đang đăng nhập...",
-    "invalidCredentials": "Email hoặc mật khẩu không đúng."
+    "invalidCredentials": "Email hoặc mật khẩu không đúng.",
+    "googleButton": "Đăng nhập bằng Google",
+    "googleLoading": "Đang chuyển tới Google...",
+    "orDivider": "Hoặc",
+    "oauthError": "Đăng nhập Google thất bại. Vui lòng thử lại.",
+    "oauthAccountNotLinked": "Email này đang dùng phương thức đăng nhập khác.",
+    "oauthCancelled": "Bạn đã hủy đăng nhập Google.",
+    "oauthFallback": "Bạn có thể thử lại hoặc đăng nhập bằng email và mật khẩu.",
+    "registerPrompt": "Chưa có tài khoản?",
+    "registerCta": "Đăng ký"
   },
   "Register": {
     "badge": "Tạo tài khoản",

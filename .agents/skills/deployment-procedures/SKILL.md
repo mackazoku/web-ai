@@ -64,6 +64,7 @@ What are you deploying?
 | **Build** | Production build works, no warnings |
 | **Environment** | Env vars set, secrets current |
 | **Safety** | Backup done, rollback plan ready |
+| **Smoke Test** | Core routes open and primary flows work |
 
 ### Pre-Deployment Checklist
 
@@ -75,6 +76,7 @@ What are you deploying?
 - [ ] Rollback plan documented
 - [ ] Team notified
 - [ ] Monitoring ready
+- [ ] Smoke test checklist prepared (routes + core flows)
 
 ---
 
@@ -121,6 +123,7 @@ What are you deploying?
 | **Error logs** | No new errors |
 | **Key user flows** | Critical features work |
 | **Performance** | Response times acceptable |
+| **Smoke test** | Confirm critical routes and login/registration flows |
 
 ### Verification Window
 

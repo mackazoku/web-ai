@@ -22,6 +22,7 @@
 - `POST /api/auth/login`
 - `POST /api/auth/logout`
 - `GET /api/auth/me`
+- `GET /api/auth/*` (OAuth providers như Google)
 
 ### Admin Auth (NextAuth)
 - `GET /api/auth/*`

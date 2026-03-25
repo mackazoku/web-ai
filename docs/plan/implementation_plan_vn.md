@@ -38,3 +38,4 @@ Mỗi task phải có:
 | F12 | Chọn therapist từ DB | done | TBD | 2026-03-25 | requirements, ui_spec, system_design, api_contracts, data_model, implementation_plan, status_board, manual_setup, coding_log, test_plan | yes | thêm mapping staff-service, API therapists, payload booking có staffId |
 | F13 | Calendar admin day view | done | TBD | 2026-03-25 | ui_spec, implementation_plan, status_board, coding_log, test_plan | no | hiển thị grid giờ thật và đặt booking theo start/end |
 | F14 | Đăng ký khách hàng | done | TBD | 2026-03-25 | requirements, ui_spec, system_design, api_contracts, data_model, implementation_plan, status_board, coding_log, test_plan | no | thêm UI đăng ký + API, validation, và chuyển hướng login |
+| F15 | Đăng nhập Google khách hàng | done | TBD | 2026-03-25 | requirements, ui_spec, system_design, api_contracts, data_model, implementation_plan, status_board, coding_log, test_plan | yes | thêm Google OAuth sign-in cho khách hàng |

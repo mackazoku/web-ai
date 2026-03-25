@@ -22,6 +22,7 @@ Define API contracts used by the SPA booking web client.
 - `POST /api/auth/login`
 - `POST /api/auth/logout`
 - `GET /api/auth/me`
+- `GET /api/auth/*` (OAuth providers such as Google)
 
 ### Admin Auth (NextAuth)
 - `GET /api/auth/*`

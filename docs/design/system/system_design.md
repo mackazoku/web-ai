@@ -55,6 +55,7 @@ graph LR
 - Anti-spam measures for public booking.
 - Admin routes under `/[locale]/admin` are protected by layout guard using NextAuth session.
 - Credentials auth (email/password, bcrypt) with role check for staff accounts.
+- Google OAuth is supported for customer sign-in.
 - Role is sourced from the `User.role` field.
 - User status controls access (active/disabled).
 

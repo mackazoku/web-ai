@@ -17,6 +17,7 @@ Liệt kê các bước thiết lập thủ công cho môi trường và triển
     - Chạy lại `seed:core` sau khi cập nhật staff/service để refresh mapping therapist.
     - Cấu hình thông tin email provider (MVP gửi email).
     - Cấu hình key cho payment provider (VNPay/Momo/Stripe).
+    - Cấu hình Google OAuth (`GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`).
     - Cấu hình timezone và giờ làm theo chi nhánh.
     - Thiết lập `NEXTAUTH_SECRET` và `NEXTAUTH_URL`.
     - Gỡ admin seed (`ADMIN_SEED_EMAIL`, `ADMIN_SEED_PASSWORD`) khi dùng DB users.
@@ -41,6 +42,7 @@ Liệt kê các bước thiết lập thủ công cho môi trường và triển
     - Chạy lại `seed:core` sau khi cập nhật staff/service để refresh mapping therapist.
     - Tạo project Vercel cho `web-ai`.
     - Cấu hình biến môi trường (auth, database, email, payment).
+    - Cấu hình Google OAuth (`GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`).
     - Thiết lập domain production và bản ghi DNS trên Vercel.
     - Bật tự động deploy từ nhánh `main`.
     - Thiết lập `NEXTAUTH_SECRET` và `NEXTAUTH_URL`.

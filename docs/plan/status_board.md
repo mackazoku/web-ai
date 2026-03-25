@@ -39,3 +39,4 @@ Fast snapshot of delivery status for active phases.
 | F12 DB-backed therapist selection | TBD | done | 2026-03-25 | requirements, ui_spec, system_design, api_contracts, data_model, plan, manual_setup, coding_log, test_plan | yes | staff-service mapping + therapists API + booking payload updates |
 | F13 Admin calendar day view positioning | TBD | done | 2026-03-25 | ui_spec, plan, coding_log, test_plan | no | time grid + booking placement |
 | F14 Customer registration | TBD | done | 2026-03-25 | requirements, ui_spec, system_design, api_contracts, data_model, plan, coding_log, test_plan | no | public registration UI + API + validation |
+| F15 Customer Google login | TBD | done | 2026-03-25 | requirements, ui_spec, system_design, api_contracts, data_model, plan, coding_log, test_plan | yes | Google OAuth sign-in for customers |

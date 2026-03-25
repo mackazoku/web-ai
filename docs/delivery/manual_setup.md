@@ -17,6 +17,7 @@ List manual steps required for environments and deployments.
     - Re-run `seed:core` after staff/service updates to refresh therapist mappings.
     - Configure email provider credentials (MVP email notifications).
     - Configure payment provider keys (VNPay/Momo/Stripe).
+    - Configure Google OAuth credentials (`GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`).
     - Configure branch timezones and business hours.
     - Set `NEXTAUTH_SECRET` and `NEXTAUTH_URL`.
     - Remove legacy admin seed credentials (`ADMIN_SEED_EMAIL`, `ADMIN_SEED_PASSWORD`) once DB users are live.
@@ -41,6 +42,7 @@ List manual steps required for environments and deployments.
     - Re-run `seed:core` after staff/service updates to refresh therapist mappings.
     - Create Vercel project for `web-ai`.
     - Configure environment variables (auth, database, email, payment).
+    - Configure Google OAuth credentials (`GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`).
     - Set production domain and DNS records in Vercel.
     - Enable automatic deployments from `main`.
     - Set `NEXTAUTH_SECRET` and `NEXTAUTH_URL`.

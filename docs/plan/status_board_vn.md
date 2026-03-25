@@ -39,3 +39,4 @@ Tóm tắt nhanh trạng thái triển khai.
 | F12 Chọn therapist từ DB | TBD | done | 2026-03-25 | requirements, ui_spec, system_design, api_contracts, data_model, plan, manual_setup, coding_log, test_plan | yes | mapping staff-service + API therapists + cập nhật payload booking |
 | F13 Calendar admin day view | TBD | done | 2026-03-25 | ui_spec, plan, coding_log, test_plan | no | grid giờ thật + đặt booking theo time |
 | F14 Đăng ký khách hàng | TBD | done | 2026-03-25 | requirements, ui_spec, system_design, api_contracts, data_model, plan, coding_log, test_plan | no | UI đăng ký + API + validation |
+| F15 Đăng nhập Google khách hàng | TBD | done | 2026-03-25 | requirements, ui_spec, system_design, api_contracts, data_model, plan, coding_log, test_plan | yes | Google OAuth sign-in cho khách hàng |

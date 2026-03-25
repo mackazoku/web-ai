@@ -10,6 +10,28 @@ Track implementation execution history per task with links, outcomes, and notabl
 - Delivery notes
 - Risks / follow-up
 
+### 2026-03-25 - Login register switch
+- Scope:
+  - Added a register link on the customer login screen to switch to account creation.
+- Decision:
+  - Keep the link simple without changing existing registration flow.
+- Delivery notes:
+  - Login page now links to `/[locale]/register`.
+- Risks / follow-up:
+  - Consider passing callbackUrl if needed for deeper flows.
+
+### 2026-03-25 - Customer Google login
+- Scope:
+  - Added Google sign-in option to the customer login screen.
+  - Synced Google sign-in with customer account creation and role assignment.
+  - Added OAuth error handling and fallback guidance.
+- Decision:
+  - Link Google accounts to existing customers by email to prevent duplicates.
+- Delivery notes:
+  - Google OAuth requires `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`.
+- Risks / follow-up:
+  - Confirm Google OAuth configuration in production.
+
 ### 2026-03-25 - Customer registration flow
 - Scope:
   - Added public registration screen and API for email + password sign-up.
