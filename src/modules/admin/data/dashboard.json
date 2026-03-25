@@ -1,0 +1,42 @@
+{
+  "stats": [
+    {"key": "revenue", "value": "$42,850", "delta": "+12.5%", "trend": "up"},
+    {"key": "bookings", "value": "128", "delta": "Active", "trend": "neutral"},
+    {"key": "cancellations", "value": "2.4%", "delta": "-0.8%", "trend": "down"}
+  ],
+  "schedule": {
+    "date": "October 24, 2024",
+    "rows": [
+      {
+        "key": "sage",
+        "labelKey": "sageSuite",
+        "blocks": [
+          {"key": "deepTissue", "labelKey": "deepTissue", "staffKey": "elena", "time": "09:00"}
+        ]
+      },
+      {
+        "key": "cedar",
+        "labelKey": "cedarLounge",
+        "blocks": [
+          {"key": "meditation", "labelKey": "privateMeditation", "staffKey": "sarah", "time": "11:00"}
+        ]
+      },
+      {
+        "key": "mist",
+        "labelKey": "mistRoom",
+        "blocks": [
+          {"key": "hydrotherapy", "labelKey": "hydrotherapy", "staffKey": "engineering", "time": "13:00-14:00"}
+        ]
+      }
+    ]
+  },
+  "pending": [
+    {"key": "clara", "nameKey": "clara", "serviceKey": "botanicalFacial", "duration": "90m", "timeAgo": "2m"},
+    {"key": "arthur", "nameKey": "arthur", "serviceKey": "hotStone", "duration": "60m", "timeAgo": "15m"}
+  ],
+  "activity": [
+    {"key": "payment", "type": "payment", "detailKey": "invoice"},
+    {"key": "staff", "type": "staff", "detailKey": "onboarded"},
+    {"key": "cancellation", "type": "cancellation", "detailKey": "retreat"}
+  ]
+}

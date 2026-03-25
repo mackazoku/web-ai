@@ -1,0 +1,114 @@
+# Brainstorming
+
+## Purpose
+Capture ideas, alternatives, and open questions before committing to scope.
+
+## Suggestions Log
+- ID: S-001
+  - Title: Public booking portal
+  - Description: Allow customers to book appointments online via a public page.
+  - Scope impact: New public UI, rate-limiting, availability exposure rules.
+  - Related screens/features: Public booking, availability search
+  - Trade-offs: Higher UX value vs. increased complexity and support load.
+  - Estimated complexity: High
+  - Status: approved
+  - Owner decision: approved
+- ID: S-002
+  - Title: Automated SMS/Email reminders
+  - Description: Send reminders 24h/2h before appointment.
+  - Scope impact: Messaging provider integration, consent tracking.
+  - Related screens/features: Appointment settings, customer preferences
+  - Trade-offs: Reduce no-shows vs. added cost and compliance.
+  - Estimated complexity: Medium
+  - Status: approved
+  - Owner decision: approved
+- ID: S-003
+  - Title: Multi-branch support
+  - Description: Support multiple spa locations with staff and service separation.
+  - Scope impact: Data model changes, role scoping, reporting changes.
+  - Related screens/features: Settings, calendar, reports
+  - Trade-offs: Scalability vs. increased data complexity.
+  - Estimated complexity: High
+  - Status: approved
+  - Owner decision: approved
+- ID: S-004
+  - Title: Voucher / promo codes
+  - Description: Apply discount codes at checkout.
+  - Scope impact: Pricing rules, validation, and reporting updates.
+  - Related screens/features: Payments, Admin promotions
+  - Trade-offs: Marketing value vs. pricing complexity.
+  - Estimated complexity: Medium
+  - Status: proposed
+  - Owner decision: pending
+- ID: S-005
+  - Title: Loyalty points
+  - Description: Earn points per booking and redeem for discounts.
+  - Scope impact: New ledger and redemption rules.
+  - Related screens/features: Customer profile, payments
+  - Trade-offs: Retention value vs. operational complexity.
+  - Estimated complexity: High
+  - Status: proposed
+  - Owner decision: pending
+- ID: S-006
+  - Title: Chatbot consultation
+  - Description: Automated assistant for service selection and FAQ.
+  - Scope impact: AI integration, monitoring, fallback UX.
+  - Related screens/features: Public site, support
+  - Trade-offs: Better support vs. AI maintenance.
+  - Estimated complexity: Medium
+  - Status: proposed
+  - Owner decision: pending
+- ID: S-007
+  - Title: Service recommendation engine
+  - Description: Recommend services based on profile and history.
+  - Scope impact: Data signals, model logic.
+  - Related screens/features: Service detail, booking flow
+  - Trade-offs: Upsell potential vs. implementation cost.
+  - Estimated complexity: Medium
+  - Status: proposed
+  - Owner decision: pending
+- ID: S-008
+  - Title: Google Maps integration
+  - Description: Map view for spa location and directions.
+  - Scope impact: External API keys and billing.
+  - Related screens/features: Spa info
+  - Trade-offs: Better UX vs. API cost.
+  - Estimated complexity: Low
+  - Status: proposed
+  - Owner decision: pending
+- ID: S-009
+  - Title: PWA / mobile app
+  - Description: Offline-friendly web app and mobile wrapper.
+  - Scope impact: Build pipeline and store distribution.
+  - Related screens/features: Entire product
+  - Trade-offs: Reach vs. maintenance overhead.
+  - Estimated complexity: High
+  - Status: proposed
+  - Owner decision: pending
+- ID: S-010
+  - Title: Seed real demo data for branches/services/bookings
+  - Description: Create real database records for core entities to enable realistic UI and admin workflows.
+  - Scope impact: Database schema extensions and seed scripts.
+  - Related screens/features: Public booking flow, admin dashboard
+  - Trade-offs: Better demos vs. additional data modeling and migrations.
+  - Estimated complexity: Medium
+  - Status: approved
+  - Owner decision: approved
+- ID: S-011
+  - Title: Wire UI to live branch/service/booking data
+  - Description: Replace fixtures with API-backed data for public booking and admin dashboard.
+  - Scope impact: API handlers, UI loading states, and data mapping.
+  - Related screens/features: Booking flow, admin dashboard
+  - Trade-offs: Realistic data vs. higher coupling to DB availability.
+  - Estimated complexity: Medium
+  - Status: proposed
+  - Owner decision: pending
+- ID: S-012
+  - Title: DB-backed therapist selection
+  - Description: Allow booking flow to select therapists filtered by branch/service from DB.
+  - Scope impact: Staff-service mapping, public therapists API, booking payload updates.
+  - Related screens/features: Booking flow, staff management
+  - Trade-offs: Better matching vs. added schema and admin maintenance.
+  - Estimated complexity: Medium
+  - Status: approved
+  - Owner decision: approved

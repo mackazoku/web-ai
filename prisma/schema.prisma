@@ -1,0 +1,122 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  admin
+  receptionist
+  staff
+}
+
+enum UserStatus {
+  active
+  disabled
+}
+
+enum BookingStatus {
+  pending
+  confirmed
+  cancelled
+  completed
+}
+
+model Branch {
+  id        String   @id @default(cuid())
+  name      String
+  address   String?
+  timezone  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  users    User[]
+  bookings Booking[]
+  services Service[]
+}
+
+model Service {
+  id              String   @id @default(cuid())
+  name            String
+  description     String?
+  durationMinutes Int
+  priceCents      Int
+  category        String?
+  active          Boolean  @default(true)
+  branchId        String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  branch   Branch?          @relation(fields: [branchId], references: [id])
+  bookings BookingService[]
+  staffServices StaffService[]
+}
+
+model User {
+  id           String     @id @default(cuid())
+  name         String
+  email        String     @unique
+  phone        String?
+  role         Role
+  status       UserStatus @default(active)
+  passwordHash String
+  authProvider String     @default("credentials")
+  branchId     String?
+  notes        String?
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  branch   Branch?  @relation(fields: [branchId], references: [id])
+  bookings Booking[] @relation("BookingStaff")
+  staffServices StaffService[]
+}
+
+model Booking {
+  id            String        @id @default(cuid())
+  branchId      String
+  staffId       String?
+  customerName  String
+  customerEmail String
+  customerPhone String?
+  startAt       DateTime
+  endAt         DateTime
+  status        BookingStatus @default(pending)
+  notes         String?
+  source        String?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  branch   Branch           @relation(fields: [branchId], references: [id])
+  staff    User?            @relation("BookingStaff", fields: [staffId], references: [id])
+  services BookingService[]
+}
+
+model BookingService {
+  id        String   @id @default(cuid())
+  bookingId String
+  serviceId String
+  createdAt DateTime @default(now())
+
+  booking Booking @relation(fields: [bookingId], references: [id])
+  service Service @relation(fields: [serviceId], references: [id])
+
+  @@index([bookingId])
+  @@index([serviceId])
+}
+
+model StaffService {
+  id        String   @id @default(cuid())
+  staffId   String
+  serviceId String
+  createdAt DateTime @default(now())
+
+  staff   User    @relation(fields: [staffId], references: [id])
+  service Service @relation(fields: [serviceId], references: [id])
+
+  @@unique([staffId, serviceId])
+  @@index([staffId])
+  @@index([serviceId])
+}

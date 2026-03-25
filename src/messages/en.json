@@ -1,0 +1,405 @@
+{
+  "Home": {
+    "title": "Web AI",
+    "subtitle": "Next.js starter with i18n, React Query, and Zustand",
+    "cta": "Get started",
+    "counterLabel": "Counter",
+    "toggleLabel": "Sidebar",
+    "statusOn": "On",
+    "statusOff": "Off",
+    "badge": "Next.js + i18n",
+    "cardTag": "Starter",
+    "sectionTitle": "Web foundation ready",
+    "sectionSubtitle": "App Router, Tailwind, type-safe i18n setup, React Query provider, and a small Zustand store to bootstrap UI state.",
+    "ctaCardTag": "Ready",
+    "ctaCardBody": "Replace this section with your actual product content once requirements are approved."
+  },
+  "AdminAccess": {
+    "notice": "Admin access is available at /{locale}/admin/login."
+  },
+  "Admin": {
+    "sidebar": {
+      "brand": "Atelier Admin",
+      "suite": "Management suite",
+      "nav": {
+        "dashboard": "Dashboard",
+        "users": "Users",
+        "services": "Services",
+        "staff": "Staff",
+        "reports": "Reports"
+      },
+      "newBooking": "New booking",
+      "roles": {
+        "admin": "Admin",
+        "receptionist": "Receptionist",
+        "staff": "Staff"
+      },
+      "logout": "Sign out",
+      "user": {
+        "name": "Julian Vane",
+        "role": "Estate manager"
+      }
+    },
+    "header": {
+      "greeting": "Good Morning, {name}.",
+      "name": "Julian",
+      "subtitle": "Here is what's happening at The Sanctuary today.",
+      "search": "Search bookings...",
+      "avatar": "JV"
+    },
+    "stats": {
+      "revenue": {
+        "label": "Total revenue",
+        "note": "vs last month"
+      },
+      "bookings": {
+        "label": "New bookings",
+        "note": "Active"
+      },
+      "cancellations": {
+        "label": "Cancellations",
+        "note": "vs last week",
+        "industry": "Industry average: 5.1%"
+      }
+    },
+    "schedule": {
+      "title": "Allocations & schedule",
+      "roomLabel": "Room / Staff",
+      "times": "09:00|11:00|13:00|15:00|17:00",
+      "rooms": {
+        "sageSuite": "The Sage Suite",
+        "cedarLounge": "Cedar Lounge",
+        "mistRoom": "Mist Room"
+      },
+      "blocks": {
+        "deepTissue": "Deep Tissue",
+        "privateMeditation": "Private Meditation",
+        "hydrotherapy": "Hydrotherapy Session"
+      },
+      "staff": {
+        "elena": "Elena M.",
+        "sarah": "Sarah J.",
+        "engineering": "Engineering Team"
+      }
+    },
+    "pending": {
+      "title": "Pending approval",
+      "approve": "Approve",
+      "reject": "Reject",
+      "names": {
+        "clara": "Clara Oswald",
+        "arthur": "Arthur Dent"
+      },
+      "services": {
+        "botanicalFacial": "Botanical Facial",
+        "hotStone": "Hot Stone Therapy"
+      }
+    },
+    "activity": {
+      "title": "Activity feed",
+      "viewAll": "View all",
+      "icons": {
+        "payment": "$",
+        "staff": "+",
+        "cancellation": "!"
+      },
+      "details": {
+        "invoice": "Invoice #8821",
+        "onboarded": "Joined as senior therapist",
+        "retreat": "Wellness Retreat"
+      },
+      "items": {
+        "payment": {
+          "title": "Payment received",
+          "detail": "$240.00 from {detail}"
+        },
+        "staff": {
+          "title": "New staff onboarded",
+          "detail": "Lydia T. - {detail}"
+        },
+        "cancellation": {
+          "title": "Cancellation",
+          "detail": "Tom R. cancelled \"{detail}\""
+        }
+      }
+    }
+  },
+  "AdminLogin": {
+    "badge": "Admin access",
+    "title": "Sign in",
+    "subtitle": "Use your staff credentials to continue.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "submit": "Sign in",
+    "loading": "Signing in...",
+    "invalidCredentials": "Invalid email or password."
+  },
+  "AdminUsers": {
+    "title": "Users",
+    "subtitle": "Manage staff accounts, roles, and access status.",
+    "form": {
+      "title": "Create or update user",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "branch": "Branch",
+      "role": "Role",
+      "status": "Status",
+      "notes": "Notes",
+      "password": "Password",
+      "create": "Create user",
+      "update": "Update user",
+      "cancel": "Cancel"
+    },
+    "roles": {
+      "admin": "Admin",
+      "receptionist": "Receptionist",
+      "staff": "Staff"
+    },
+    "status": {
+      "active": "Active",
+      "disabled": "Disabled"
+    },
+    "list": {
+      "title": "User list",
+      "refresh": "Refresh",
+      "loading": "Loading...",
+      "empty": "No users found.",
+      "columns": {
+        "name": "Name",
+        "email": "Email",
+        "role": "Role",
+        "status": "Status",
+        "branch": "Branch",
+        "actions": "Actions"
+      },
+      "edit": "Edit",
+      "disable": "Disable"
+    },
+    "errors": {
+      "load": "Failed to load users.",
+      "save": "Failed to save user.",
+      "disable": "Failed to disable user."
+    }
+  },
+  "PublicHome": {
+    "brand": "The Sanctuary",
+    "nav": {
+      "services": "Services",
+      "about": "About",
+      "history": "History",
+      "admin": "Admin"
+    },
+    "hero": {
+      "kicker": "Welcome to the editorial atelier",
+      "title": "Restore your",
+      "emphasis": "natural state",
+      "subtitle": "A curated sanctuary designed for deep rest and somatic healing. Experience the rituals of calm with our premium care.",
+      "primaryCta": "Book now",
+      "secondaryCta": "Explore rituals"
+    },
+    "disciplines": {
+      "title": "Curated disciplines",
+      "subtitle": "Select rituals that align with how you want to feel.",
+      "items": {
+        "deepTissue": {
+          "tag": "Ritual",
+          "title": "Deep Tissue Rituals",
+          "body": "Release muscle tension through focused strokes and mindful pressure."
+        },
+        "somaticRelease": {
+          "tag": "Somatic",
+          "title": "Somatic Release",
+          "body": "Therapeutic touch to soften stress patterns and restore balance."
+        },
+        "guidedStillness": {
+          "tag": "Stillness",
+          "title": "Guided Stillness",
+          "body": "Breathwork and meditation sessions for deep nervous system reset."
+        },
+        "skinApothecary": {
+          "tag": "Apothecary",
+          "title": "Skin Apothecary",
+          "body": "Botanical facials curated for luminous, replenished skin."
+        }
+      }
+    },
+    "seasonal": {
+      "title": "Seasonal selections",
+      "cta": "View all services",
+      "tag": "Signature",
+      "rating": "Rating {rating}",
+      "book": "Book",
+      "items": {
+        "signature": {"title": "The Sanctuary Signature"},
+        "botanical": {"title": "Botanical Facial"},
+        "volcanic": {"title": "Volcanic Clay Wrap"}
+      }
+    },
+    "branch": {
+      "kicker": "Choose your sanctuary",
+      "title": "Book your preferred location",
+      "subtitle": "Multi-branch availability with a single booking flow.",
+      "selectPlaceholder": "Select a branch",
+      "cta": "Continue to booking"
+    },
+    "story": {
+      "kicker": "Our ethos",
+      "title": "The art of conscious indulgence",
+      "body": "Personalized rituals designed to recalibrate energy, balance the body, and restore inner calm.",
+      "stats": {
+        "years": "Years of care",
+        "rituals": "Organic rituals",
+        "guests": "Guest rating"
+      }
+    },
+    "testimonial": {
+      "quote": "The Sanctuary is more than a spa; it is a recalibration of spirit. The attention to detail is breathtaking.",
+      "author": "Elena V. · Creative Director"
+    },
+    "newsletter": {
+      "title": "Stay in flow",
+      "subtitle": "Receive seasonal rituals, calm guides, and early booking windows.",
+      "placeholder": "Email address",
+      "cta": "Subscribe"
+    }
+  },
+  "Booking": {
+    "brand": "The Sanctuary",
+    "cancel": "Cancel booking",
+    "steps": {
+      "service": "Service",
+      "branch": "Branch",
+      "schedule": "Schedule",
+      "staff": "Staff",
+      "confirm": "Confirm"
+    },
+    "service": {
+      "title": "Select a service",
+      "subtitle": "Choose the ritual that fits how you want to feel.",
+      "items": {
+        "botanicalGlow": {"tag": "Facial", "title": "Botanical Glow Facial"},
+        "deepTissue": {"tag": "Ritual", "title": "Deep Tissue Release"},
+        "restorative": {"tag": "Body", "title": "Restorative Body Wrap"}
+      }
+    },
+    "branch": {
+      "title": "Choose a branch",
+      "subtitle": "Select the spa location that works best for you."
+    },
+    "calendar": {
+      "title": "Select your preferred date",
+      "subtitle": "Choose a day that suits your flow.",
+      "month": "October 2024",
+      "arrows": "<  >",
+      "previous": "Previous month",
+      "next": "Next month",
+      "days": "Sun|Mon|Tue|Wed|Thu|Fri|Sat",
+      "dates": "29|30|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|1|2",
+      "selected": "9"
+    },
+    "time": {
+      "title": "Choose a time"
+    },
+    "therapist": {
+      "title": "Your therapist",
+      "roleLabel": "Therapist",
+      "any": "No preference",
+      "loading": "Loading therapists...",
+      "error": "Unable to load therapists.",
+      "empty": "No therapists available for this service.",
+      "reviews": "reviews",
+      "items": {
+        "elena": {"name": "Elena Vance", "role": "Master Aesthetician"},
+        "julian": {"name": "Julian Rossi", "role": "Deep Tissue Specialist"}
+      }
+    },
+    "details": {
+      "title": "Personal details",
+      "fullName": "Full name",
+      "email": "Email address",
+      "phone": "Phone number"
+    },
+    "summary": {
+      "title": "Booking summary",
+      "service": "Service",
+      "with": "With",
+      "subtotal": "Subtotal",
+      "fee": "Service fee",
+      "total": "Total",
+      "payNow": "Pay online now",
+      "payLater": "Pay at sanctuary",
+      "disclaimer": "By completing this booking, you agree to our 24-hour cancellation policy.",
+      "services": {
+        "botanicalGlow": "Botanical Glow Facial"
+      }
+    },
+    "submit": {
+      "success": "Booking created. See you at the sanctuary.",
+      "error": "Booking failed. Please try again.",
+      "invalid": "Please complete your details before booking.",
+      "submitting": "Processing..."
+    }
+  },
+  "CustomerProfile": {
+    "brand": "The Sanctuary",
+    "nav": {
+      "services": "Services",
+      "about": "About",
+      "history": "History",
+      "account": "JD"
+    },
+    "title": "Your Retreats",
+    "subtitle": "Manage your upcoming journeys and revisit the moments of calm you've experienced with us.",
+    "upcoming": {
+      "title": "Upcoming",
+      "count": "{count} reservations",
+      "dateLabel": "Date:",
+      "timeLabel": "Time:",
+      "with": "With",
+      "reschedule": "Reschedule",
+      "cancel": "Cancel",
+      "items": {
+        "restoration": {
+          "category": "Deep Tissue Therapy",
+          "title": "The Restoration Session"
+        },
+        "botanical": {
+          "category": "Facial Ritual",
+          "title": "Botanical Radiance"
+        }
+      }
+    },
+    "past": {
+      "title": "Past journeys",
+      "count": "{count} completed",
+      "viewReceipt": "View Receipt",
+      "items": {
+        "himalayan": {"title": "Himalayan Salt Sauna"}
+      }
+    },
+    "therapists": {
+      "elena": "Elena V.",
+      "marcus": "Marcus Thorne"
+    },
+    "status": {
+      "confirmed": "Confirmed",
+      "completed": "Completed"
+    },
+    "stayConnected": {
+      "title": "Stay connected",
+      "subtitle": "Choose how you wish to receive reminders and sanctuary updates.",
+      "sms": "SMS notifications",
+      "smsHint": "Arrival & time alerts",
+      "email": "Email updates",
+      "emailHint": "Receipts & newsletter",
+      "helpTitle": "Need help?",
+      "helpBody": "Contact our concierge at 0800-CALM"
+    },
+    "membership": {
+      "title": "The Inner Circle",
+      "body": "Members enjoy 15% off all rituals and priority booking windows.",
+      "cta": "Explore membership"
+    }
+  }
+}

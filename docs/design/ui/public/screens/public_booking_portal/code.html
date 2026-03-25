@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Public Landing Mock</title>
+    <style>
+      :root { --bg: #f7f3ee; --olive: #5f6b4a; --muted: #7b746b; --border: #e5dfd4; }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: "Georgia", serif; background: var(--bg); color: #1e1a16; }
+      header { padding: 28px 64px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
+      nav { display: flex; gap: 24px; font-family: "Inter", sans-serif; color: var(--muted); font-size: 14px; }
+      .hero { padding: 64px; background: #efe9df; display: grid; gap: 18px; }
+      .hero h1 { font-size: 48px; margin: 0; }
+      .cta { display: flex; gap: 12px; font-family: "Inter", sans-serif; }
+      .btn { padding: 12px 22px; border-radius: 12px; border: 1px solid var(--border); }
+      .btn.primary { background: var(--olive); color: #fff; border-color: transparent; }
+      .section { padding: 52px 64px; }
+      .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .card { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 18px; }
+      .footer { padding: 40px; text-align: center; color: var(--muted); font-family: "Inter", sans-serif; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div style="font-weight:600;">The Sanctuary</div>
+      <nav>
+        <div>Services</div>
+        <div>About</div>
+        <div>History</div>
+      </nav>
+    </header>
+    <section class="hero">
+      <div style="letter-spacing:.2em; font-family: 'Inter', sans-serif; font-size:12px; color: var(--muted);">WELCOME TO THE EDITORIAL ATELIER</div>
+      <h1>Restore your natural state.</h1>
+      <p style="max-width:520px; color: var(--muted);">A curated sanctuary designed for deep rest and somatic healing.</p>
+      <div class="cta">
+        <div class="btn primary">Book Now</div>
+        <div class="btn">Explore Rituals</div>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Curated Disciplines</h2>
+      <div class="grid">
+        <div class="card">Deep Tissue Rituals</div>
+        <div class="card">Skin Apothecary</div>
+        <div class="card">Guided Stillness</div>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Seasonal Selections</h2>
+      <div class="grid">
+        <div class="card">The Sanctuary Signature</div>
+        <div class="card">Botanical Facial</div>
+        <div class="card">Volcanic Clay Wrap</div>
+      </div>
+    </section>
+    <section class="section" style="background:#ede7dd;">
+      <h2>Stay in Flow</h2>
+      <div class="card" style="margin-top:16px; display:flex; justify-content:space-between; align-items:center;">
+        <div>Join our newsletter</div>
+        <div class="btn primary">Subscribe</div>
+      </div>
+    </section>
+    <div class="footer">THE EDITORIAL SANCTUARY</div>
+  </body>
+</html>

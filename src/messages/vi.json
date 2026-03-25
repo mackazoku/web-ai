@@ -1,0 +1,405 @@
+{
+  "Home": {
+    "title": "Web AI",
+    "subtitle": "Khởi tạo Next.js với i18n, React Query và Zustand",
+    "cta": "Bắt đầu",
+    "counterLabel": "Bộ đếm",
+    "toggleLabel": "Thanh bên",
+    "statusOn": "Bật",
+    "statusOff": "Tắt",
+    "badge": "Next.js + i18n",
+    "cardTag": "Khởi tạo",
+    "sectionTitle": "Nền tảng web sẵn sàng",
+    "sectionSubtitle": "App Router, Tailwind, cấu hình i18n kiểu an toàn, React Query provider và một Zustand store nhỏ để khởi tạo state UI.",
+    "ctaCardTag": "Sẵn sàng",
+    "ctaCardBody": "Thay phần này bằng nội dung sản phẩm thực tế sau khi yêu cầu được phê duyệt."
+  },
+  "AdminAccess": {
+    "notice": "Trang quản trị ở /{locale}/admin/login."
+  },
+  "Admin": {
+    "sidebar": {
+      "brand": "Atelier Admin",
+      "suite": "Bộ quản trị",
+      "nav": {
+        "dashboard": "Tổng quan",
+        "users": "Người dùng",
+        "services": "Dịch vụ",
+        "staff": "Nhân viên",
+        "reports": "Báo cáo"
+      },
+      "newBooking": "Tạo lịch hẹn",
+      "roles": {
+        "admin": "Admin",
+        "receptionist": "Lễ tân",
+        "staff": "Nhân viên"
+      },
+      "logout": "Đăng xuất",
+      "user": {
+        "name": "Julian Vane",
+        "role": "Quản lý chi nhánh"
+      }
+    },
+    "header": {
+      "greeting": "Chào buổi sáng, {name}.",
+      "name": "Julian",
+      "subtitle": "Tổng hợp tình hình The Sanctuary hôm nay.",
+      "search": "Tìm booking...",
+      "avatar": "JV"
+    },
+    "stats": {
+      "revenue": {
+        "label": "Doanh thu",
+        "note": "so với tháng trước"
+      },
+      "bookings": {
+        "label": "Booking mới",
+        "note": "Đang hoạt động"
+      },
+      "cancellations": {
+        "label": "Tỷ lệ hủy",
+        "note": "so với tuần trước",
+        "industry": "Trung bình ngành: 5.1%"
+      }
+    },
+    "schedule": {
+      "title": "Phân bổ & lịch",
+      "roomLabel": "Phòng / Nhân sự",
+      "times": "09:00|11:00|13:00|15:00|17:00",
+      "rooms": {
+        "sageSuite": "Phòng Sage",
+        "cedarLounge": "Sảnh Cedar",
+        "mistRoom": "Phòng Mist"
+      },
+      "blocks": {
+        "deepTissue": "Trị liệu mô sâu",
+        "privateMeditation": "Thiền riêng tư",
+        "hydrotherapy": "Thủy trị liệu"
+      },
+      "staff": {
+        "elena": "Elena M.",
+        "sarah": "Sarah J.",
+        "engineering": "Đội vận hành"
+      }
+    },
+    "pending": {
+      "title": "Chờ duyệt",
+      "approve": "Duyệt",
+      "reject": "Từ chối",
+      "names": {
+        "clara": "Clara Oswald",
+        "arthur": "Arthur Dent"
+      },
+      "services": {
+        "botanicalFacial": "Facial thảo mộc",
+        "hotStone": "Đá nóng trị liệu"
+      }
+    },
+    "activity": {
+      "title": "Hoạt động",
+      "viewAll": "Xem tất cả",
+      "icons": {
+        "payment": "$",
+        "staff": "+",
+        "cancellation": "!"
+      },
+      "details": {
+        "invoice": "Hóa đơn #8821",
+        "onboarded": "Gia nhập vị trí chuyên viên cao cấp",
+        "retreat": "Retreat chăm sóc"
+      },
+      "items": {
+        "payment": {
+          "title": "Đã nhận thanh toán",
+          "detail": "$240.00 từ {detail}"
+        },
+        "staff": {
+          "title": "Onboard nhân sự mới",
+          "detail": "Lydia T. - {detail}"
+        },
+        "cancellation": {
+          "title": "Hủy lịch",
+          "detail": "Tom R. hủy \"{detail}\""
+        }
+      }
+    }
+  },
+  "AdminLogin": {
+    "badge": "Truy cập quản trị",
+    "title": "Đăng nhập",
+    "subtitle": "Dùng tài khoản nhân viên để tiếp tục.",
+    "emailLabel": "Email",
+    "passwordLabel": "Mật khẩu",
+    "submit": "Đăng nhập",
+    "loading": "Đang đăng nhập...",
+    "invalidCredentials": "Email hoặc mật khẩu không đúng."
+  },
+  "AdminUsers": {
+    "title": "Người dùng",
+    "subtitle": "Quản lý tài khoản nhân viên, role và trạng thái truy cập.",
+    "form": {
+      "title": "Tạo hoặc cập nhật user",
+      "name": "Tên",
+      "email": "Email",
+      "phone": "Số điện thoại",
+      "branch": "Chi nhánh",
+      "role": "Role",
+      "status": "Trạng thái",
+      "notes": "Ghi chú",
+      "password": "Mật khẩu",
+      "create": "Tạo user",
+      "update": "Cập nhật",
+      "cancel": "Hủy"
+    },
+    "roles": {
+      "admin": "Admin",
+      "receptionist": "Lễ tân",
+      "staff": "Nhân viên"
+    },
+    "status": {
+      "active": "Hoạt động",
+      "disabled": "Vô hiệu"
+    },
+    "list": {
+      "title": "Danh sách user",
+      "refresh": "Tải lại",
+      "loading": "Đang tải...",
+      "empty": "Chưa có user.",
+      "columns": {
+        "name": "Tên",
+        "email": "Email",
+        "role": "Role",
+        "status": "Trạng thái",
+        "branch": "Chi nhánh",
+        "actions": "Thao tác"
+      },
+      "edit": "Sửa",
+      "disable": "Vô hiệu"
+    },
+    "errors": {
+      "load": "Tải danh sách user thất bại.",
+      "save": "Lưu user thất bại.",
+      "disable": "Không thể vô hiệu user."
+    }
+  },
+  "PublicHome": {
+    "brand": "The Sanctuary",
+    "nav": {
+      "services": "Dịch vụ",
+      "about": "Giới thiệu",
+      "history": "Lịch sử",
+      "admin": "Quản trị"
+    },
+    "hero": {
+      "kicker": "Chào mừng đến atelier trị liệu",
+      "title": "Khôi phục",
+      "emphasis": "trạng thái tự nhiên",
+      "subtitle": "Không gian an trú được tuyển chọn cho nghỉ sâu và hồi phục thân tâm. Trải nghiệm nghi thức an yên cùng chăm sóc cao cấp.",
+      "primaryCta": "Đặt lịch ngay",
+      "secondaryCta": "Khám phá nghi thức"
+    },
+    "disciplines": {
+      "title": "Các nghi thức chọn lọc",
+      "subtitle": "Chọn nghi thức phù hợp với cảm giác bạn muốn hướng tới.",
+      "items": {
+        "deepTissue": {
+          "tag": "Nghi thức",
+          "title": "Nghi thức mô sâu",
+          "body": "Giải phóng căng cơ bằng lực ấn có chủ đích và nhịp điệu thư giãn."
+        },
+        "somaticRelease": {
+          "tag": "Somatic",
+          "title": "Giải phóng thân thể",
+          "body": "Chạm trị liệu để làm mềm căng thẳng và tái cân bằng."
+        },
+        "guidedStillness": {
+          "tag": "Tĩnh lặng",
+          "title": "Tĩnh lặng dẫn dắt",
+          "body": "Thiền và hô hấp để làm mới hệ thần kinh."
+        },
+        "skinApothecary": {
+          "tag": "Thảo mộc",
+          "title": "Apothecary cho làn da",
+          "body": "Facial thảo mộc cho làn da rạng rỡ."
+        }
+      }
+    },
+    "seasonal": {
+      "title": "Gợi ý theo mùa",
+      "cta": "Xem tất cả dịch vụ",
+      "tag": "Signature",
+      "rating": "Đánh giá {rating}",
+      "book": "Đặt lịch",
+      "items": {
+        "signature": {"title": "Chữ ký Sanctuary"},
+        "botanical": {"title": "Facial Thảo Mộc"},
+        "volcanic": {"title": "Ủ khoáng núi lửa"}
+      }
+    },
+    "branch": {
+      "kicker": "Chọn spa phù hợp",
+      "title": "Đặt lịch tại chi nhánh bạn yêu thích",
+      "subtitle": "Đa chi nhánh, một luồng đặt lịch thống nhất.",
+      "selectPlaceholder": "Chọn chi nhánh",
+      "cta": "Tiếp tục đặt lịch"
+    },
+    "story": {
+      "kicker": "Tôn chỉ",
+      "title": "Nghệ thuật tận hưởng có ý thức",
+      "body": "Nghi thức cá nhân hóa giúp cân bằng năng lượng, cơ thể và nội tâm.",
+      "stats": {
+        "years": "Năm chăm sóc",
+        "rituals": "Nghi thức hữu cơ",
+        "guests": "Đánh giá khách"
+      }
+    },
+    "testimonial": {
+      "quote": "The Sanctuary không chỉ là spa; đó là sự hiệu chỉnh tinh thần. Sự chăm chút đến từng chi tiết thật ngoạn mục.",
+      "author": "Elena V. · Giám đốc sáng tạo"
+    },
+    "newsletter": {
+      "title": "Giữ nhịp an yên",
+      "subtitle": "Nhận nghi thức theo mùa, cẩm nang thư thái và khung giờ ưu tiên.",
+      "placeholder": "Địa chỉ email",
+      "cta": "Đăng ký"
+    }
+  },
+  "Booking": {
+    "brand": "The Sanctuary",
+    "cancel": "Hủy đặt lịch",
+    "steps": {
+      "service": "Dịch vụ",
+      "branch": "Chi nhánh",
+      "schedule": "Lịch",
+      "staff": "Nhân viên",
+      "confirm": "Xác nhận"
+    },
+    "service": {
+      "title": "Chọn dịch vụ",
+      "subtitle": "Chọn nghi thức phù hợp với nhu cầu của bạn.",
+      "items": {
+        "botanicalGlow": {"tag": "Facial", "title": "Facial rạng rỡ thảo mộc"},
+        "deepTissue": {"tag": "Ritual", "title": "Giải phóng mô sâu"},
+        "restorative": {"tag": "Body", "title": "Ủ phục hồi cơ thể"}
+      }
+    },
+    "branch": {
+      "title": "Chọn chi nhánh",
+      "subtitle": "Chọn địa điểm spa thuận tiện nhất."
+    },
+    "calendar": {
+      "title": "Chọn ngày phù hợp",
+      "subtitle": "Chọn ngày phù hợp với lịch của bạn.",
+      "month": "Tháng 10, 2024",
+      "arrows": "<  >",
+      "previous": "Tháng trước",
+      "next": "Tháng sau",
+      "days": "CN|T2|T3|T4|T5|T6|T7",
+      "dates": "29|30|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|1|2",
+      "selected": "9"
+    },
+    "time": {
+      "title": "Chọn giờ"
+    },
+    "therapist": {
+      "title": "Chuyên viên",
+      "roleLabel": "Chuyên viên",
+      "any": "Không chọn cụ thể",
+      "loading": "Đang tải danh sách chuyên viên...",
+      "error": "Không tải được chuyên viên.",
+      "empty": "Chưa có chuyên viên cho dịch vụ này.",
+      "reviews": "đánh giá",
+      "items": {
+        "elena": {"name": "Elena Vance", "role": "Chuyên viên thẩm mỹ"},
+        "julian": {"name": "Julian Rossi", "role": "Chuyên viên mô sâu"}
+      }
+    },
+    "details": {
+      "title": "Thông tin cá nhân",
+      "fullName": "Họ và tên",
+      "email": "Email",
+      "phone": "Số điện thoại"
+    },
+    "summary": {
+      "title": "Tóm tắt lịch hẹn",
+      "service": "Dịch vụ",
+      "with": "Cùng",
+      "subtotal": "Tạm tính",
+      "fee": "Phí dịch vụ",
+      "total": "Tổng cộng",
+      "payNow": "Thanh toán online",
+      "payLater": "Thanh toán tại spa",
+      "disclaimer": "Hoàn tất đặt lịch đồng nghĩa bạn đồng ý chính sách hủy trước 24 giờ.",
+      "services": {
+        "botanicalGlow": "Facial rạng rỡ thảo mộc"
+      }
+    },
+    "submit": {
+      "success": "Đặt lịch thành công. Hẹn gặp bạn tại spa.",
+      "error": "Đặt lịch thất bại. Vui lòng thử lại.",
+      "invalid": "Vui lòng nhập đủ thông tin trước khi đặt lịch.",
+      "submitting": "Đang xử lý..."
+    }
+  },
+  "CustomerProfile": {
+    "brand": "The Sanctuary",
+    "nav": {
+      "services": "Dịch vụ",
+      "about": "Giới thiệu",
+      "history": "Lịch sử",
+      "account": "JD"
+    },
+    "title": "Hành trình của bạn",
+    "subtitle": "Quản lý lịch sắp tới và xem lại những khoảnh khắc an yên đã trải nghiệm cùng chúng tôi.",
+    "upcoming": {
+      "title": "Sắp tới",
+      "count": "{count} lịch hẹn",
+      "dateLabel": "Ngày:",
+      "timeLabel": "Giờ:",
+      "with": "Với",
+      "reschedule": "Đổi lịch",
+      "cancel": "Hủy",
+      "items": {
+        "restoration": {
+          "category": "Liệu trình mô sâu",
+          "title": "Buổi phục hồi chuyên sâu"
+        },
+        "botanical": {
+          "category": "Nghi thức facial",
+          "title": "Rạng rỡ thảo mộc"
+        }
+      }
+    },
+    "past": {
+      "title": "Đã trải nghiệm",
+      "count": "{count} đã hoàn tất",
+      "viewReceipt": "Xem hóa đơn",
+      "items": {
+        "himalayan": {"title": "Xông muối Himalaya"}
+      }
+    },
+    "therapists": {
+      "elena": "Elena V.",
+      "marcus": "Marcus Thorne"
+    },
+    "status": {
+      "confirmed": "Đã xác nhận",
+      "completed": "Hoàn tất"
+    },
+    "stayConnected": {
+      "title": "Kết nối thông báo",
+      "subtitle": "Chọn cách bạn muốn nhận nhắc lịch và cập nhật từ spa.",
+      "sms": "Thông báo SMS",
+      "smsHint": "Nhắc giờ đến",
+      "email": "Cập nhật email",
+      "emailHint": "Hóa đơn & newsletter",
+      "helpTitle": "Cần hỗ trợ?",
+      "helpBody": "Liên hệ concierge qua 0800-CALM"
+    },
+    "membership": {
+      "title": "The Inner Circle",
+      "body": "Hội viên giảm 15% cho mọi liệu trình và ưu tiên khung giờ đặt.",
+      "cta": "Khám phá hội viên"
+    }
+  }
+}

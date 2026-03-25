@@ -1,0 +1,23 @@
+{
+  "disciplines": [
+    {"key": "deepTissue"},
+    {"key": "somaticRelease"},
+    {"key": "guidedStillness"},
+    {"key": "skinApothecary"}
+  ],
+  "seasonal": [
+    {"key": "signature", "duration": "90 min", "price": "$120", "rating": "4.9"},
+    {"key": "botanical", "duration": "60 min", "price": "$95", "rating": "4.8"},
+    {"key": "volcanic", "duration": "75 min", "price": "$110", "rating": "4.7"}
+  ],
+  "branches": [
+    {"key": "downtown", "label": "Downtown Atelier"},
+    {"key": "riverside", "label": "Riverside Retreat"},
+    {"key": "garden", "label": "Garden House"}
+  ],
+  "stats": [
+    {"labelKey": "years", "value": "28+"},
+    {"labelKey": "rituals", "value": "100%"},
+    {"labelKey": "guests", "value": "4.9"}
+  ]
+}

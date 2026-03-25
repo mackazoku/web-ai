@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Booking Flow Mock</title>
+    <style>
+      :root { --bg: #f7f3ee; --olive: #5f6b4a; --border: #e5dfd4; --muted: #7b746b; }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: "Georgia", serif; background: var(--bg); color: #1e1a16; }
+      header { padding: 24px 64px; display: flex; justify-content: space-between; font-family: "Inter", sans-serif; color: var(--muted); }
+      main { padding: 0 64px 64px; display: grid; grid-template-columns: 2.2fr 1fr; gap: 32px; }
+      .stepper { display: flex; gap: 12px; padding: 24px 64px; font-family: "Inter", sans-serif; color: var(--muted); }
+      .step { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--border); display:flex; align-items:center; justify-content:center; }
+      .step.active { background: var(--olive); color: #fff; border-color: transparent; }
+      .panel { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 20px; margin-bottom: 20px; }
+      .chips { display: flex; gap: 10px; flex-wrap: wrap; }
+      .chip { padding: 10px 16px; border-radius: 999px; border: 1px solid var(--border); font-family: "Inter", sans-serif; }
+      .chip.active { background: #dfe8cf; border-color: transparent; }
+      .therapists { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      .summary { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 20px; position: sticky; top: 24px; }
+      .btn { padding: 12px; border-radius: 12px; text-align: center; font-family: "Inter", sans-serif; }
+      .btn.primary { background: var(--olive); color: #fff; }
+      .btn.secondary { border: 1px solid var(--border); color: var(--muted); margin-top: 10px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>The Sanctuary</div>
+      <div>Cancel Booking</div>
+    </header>
+    <div class="stepper">
+      <div class="step active">1</div> Service
+      <div class="step active">2</div> Schedule
+      <div class="step">3</div> Staff
+      <div class="step">4</div> Confirm
+    </div>
+    <main>
+      <div>
+        <div class="panel">
+          <h2>Select your preferred date</h2>
+          <div style="height:160px; background:#f3efe9; border-radius: 16px;"></div>
+        </div>
+        <div class="panel">
+          <h2>Choose a time</h2>
+          <div class="chips">
+            <div class="chip active">09:00 AM</div>
+            <div class="chip">10:30 AM</div>
+            <div class="chip">01:00 PM</div>
+            <div class="chip">02:30 PM</div>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Your Therapist</h2>
+          <div class="therapists">
+            <div class="chip">Elena Vance · 4.9</div>
+            <div class="chip">Julian Rossi · 5.0</div>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Personal details</h2>
+          <div style="height:120px; background:#f3efe9; border-radius: 16px;"></div>
+        </div>
+      </div>
+      <div class="summary">
+        <h3>Booking Summary</h3>
+        <p style="color: var(--muted);">Botanical Glow Facial · 60 min</p>
+        <p><strong>Total:</strong> $150.00</p>
+        <div class="btn primary">Pay Online Now</div>
+        <div class="btn secondary">Pay at Sanctuary</div>
+      </div>
+    </main>
+  </body>
+</html>

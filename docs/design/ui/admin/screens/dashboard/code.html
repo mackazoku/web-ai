@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard Mock</title>
+    <style>
+      :root {
+        --bg: #f7f3ee;
+        --panel: #ffffff;
+        --card: #fdfcf9;
+        --border: #e5dfd4;
+        --text: #1e1a16;
+        --muted: #7b746b;
+        --olive: #5f6b4a;
+        --olive-600: #4e5a3a;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Georgia", "Times New Roman", serif;
+        color: var(--text);
+        background: var(--bg);
+      }
+      .shell {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        min-height: 100vh;
+      }
+      aside {
+        background: #f3efe9;
+        padding: 32px 24px;
+        border-right: 1px solid var(--border);
+      }
+      .brand {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+      .brand span { display: block; font-size: 11px; letter-spacing: 0.24em; color: var(--muted); margin-top: 6px; }
+      nav { margin-top: 28px; display: grid; gap: 14px; font-family: "Inter", sans-serif; }
+      .nav-item { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 14px; }
+      .nav-item.active { color: var(--olive); font-weight: 600; }
+      .new-booking {
+        margin-top: 32px;
+        padding: 12px 18px;
+        border-radius: 14px;
+        background: var(--olive);
+        color: #fff;
+        text-align: center;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+      }
+      .user {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-top: 32px;
+        color: var(--muted);
+        font-family: "Inter", sans-serif;
+      }
+      .avatar { width: 40px; height: 40px; border-radius: 50%; background: #d7d2c7; }
+      main { padding: 40px 48px; }
+      .topbar { display: flex; justify-content: space-between; align-items: center; }
+      .greeting h1 { margin: 0; font-size: 36px; }
+      .greeting p { margin: 6px 0 0; color: var(--muted); font-family: "Inter", sans-serif; }
+      .search {
+        width: 280px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: var(--panel);
+        font-family: "Inter", sans-serif;
+        color: var(--muted);
+      }
+      .cards { margin-top: 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 20px;
+        box-shadow: 0 18px 40px -32px rgba(0,0,0,0.35);
+        font-family: "Inter", sans-serif;
+      }
+      .card h3 { margin: 0; font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--muted); }
+      .card .value { margin: 12px 0 6px; font-size: 28px; color: var(--text); font-family: "Georgia", serif; }
+      .progress { height: 4px; background: #e7e2d8; border-radius: 99px; overflow: hidden; }
+      .progress span { display: block; width: 55%; height: 100%; background: var(--olive); }
+      .layout {
+        margin-top: 28px;
+        display: grid;
+        grid-template-columns: 2.2fr 1fr;
+        gap: 24px;
+      }
+      .schedule {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 20px;
+      }
+      .schedule h2 { margin: 0 0 16px; font-size: 18px; }
+      .grid {
+        display: grid;
+        gap: 14px;
+      }
+      .row {
+        background: #faf7f2;
+        border-radius: 14px;
+        padding: 12px 16px;
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 12px;
+        align-items: center;
+        font-family: "Inter", sans-serif;
+      }
+      .slot { background: #dfe8cf; border-radius: 12px; padding: 10px 12px; font-size: 12px; }
+      .slot strong { display: block; color: var(--text); }
+      .slot span { color: var(--muted); }
+      .rail {
+        display: grid;
+        gap: 18px;
+      }
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 18px;
+        font-family: "Inter", sans-serif;
+      }
+      .panel h4 { margin: 0 0 12px; font-size: 14px; }
+      .approval { display: grid; gap: 10px; }
+      .approval-item {
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 12px;
+        display: grid;
+        gap: 8px;
+      }
+      .actions { display: flex; gap: 10px; }
+      .btn { flex: 1; padding: 8px 0; border-radius: 10px; border: 1px solid var(--border); text-align: center; font-size: 12px; }
+      .btn.primary { background: var(--olive); color: #fff; border-color: transparent; }
+      .activity { display: grid; gap: 10px; font-size: 12px; color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <aside>
+        <div class="brand">Atelier Admin<span>MANAGEMENT SUITE</span></div>
+        <nav>
+          <div class="nav-item active">Dashboard</div>
+          <div class="nav-item">Services</div>
+          <div class="nav-item">Staff</div>
+          <div class="nav-item">Reports</div>
+        </nav>
+        <div class="new-booking">New Booking</div>
+        <div class="user">
+          <div class="avatar"></div>
+          <div>
+            <div>Julian Vane</div>
+            <div style="font-size:12px; color: var(--muted);">Estate Manager</div>
+          </div>
+        </div>
+      </aside>
+      <main>
+        <div class="topbar">
+          <div class="greeting">
+            <h1>Good Morning, Julian.</h1>
+            <p>Here is what’s happening at The Sanctuary today.</p>
+          </div>
+          <input class="search" value="Search bookings..." />
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Total Revenue</h3>
+            <div class="value">$42,850</div>
+            <div class="progress"><span></span></div>
+          </div>
+          <div class="card">
+            <h3>New Bookings</h3>
+            <div class="value">128</div>
+            <div class="progress"><span style="width:65%"></span></div>
+          </div>
+          <div class="card">
+            <h3>Cancellations</h3>
+            <div class="value">2.4%</div>
+            <div class="progress"><span style="width:30%"></span></div>
+          </div>
+        </div>
+
+        <div class="layout">
+          <div class="schedule">
+            <h2>Allocations &amp; Schedule</h2>
+            <div class="grid">
+              <div class="row">
+                <div>The Sage Suite</div>
+                <div class="slot"><strong>Deep Tissue</strong><span>Elena M. · 09:00</span></div>
+              </div>
+              <div class="row">
+                <div>Cedar Lounge</div>
+                <div class="slot"><strong>Private Meditation</strong><span>Sarah J. · 13:00</span></div>
+              </div>
+              <div class="row">
+                <div>Mist Room</div>
+                <div class="slot"><strong>Hydrotherapy</strong><span>Engineering Team · 15:00</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="rail">
+            <div class="panel">
+              <h4>Pending Approval</h4>
+              <div class="approval">
+                <div class="approval-item">
+                  <div><strong>Clara Oswald</strong></div>
+                  <div class="actions">
+                    <div class="btn primary">Approve</div>
+                    <div class="btn">Reject</div>
+                  </div>
+                </div>
+                <div class="approval-item">
+                  <div><strong>Arthur Dent</strong></div>
+                  <div class="actions">
+                    <div class="btn primary">Approve</div>
+                    <div class="btn">Reject</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <h4>Activity Feed</h4>
+              <div class="activity">
+                <div>Payment received · Invoice #8821</div>
+                <div>New staff onboarded</div>
+                <div>Cancellation logged</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

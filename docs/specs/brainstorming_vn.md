@@ -1,0 +1,114 @@
+# Brainstorming
+
+## Mục đích
+Ghi lại ý tưởng, phương án và câu hỏi mở trước khi chốt phạm vi.
+
+## Nhật ký đề xuất
+- ID: S-001
+  - Title: Cổng đặt lịch công khai
+  - Description: Cho phép khách hàng đặt lịch online qua trang công khai.
+  - Scope impact: UI công khai mới, giới hạn tần suất, quy tắc hiển thị khả dụng.
+  - Related screens/features: Đặt lịch công khai, tìm lịch trống
+  - Trade-offs: Tăng giá trị UX vs. tăng độ phức tạp và hỗ trợ.
+  - Estimated complexity: High
+  - Status: approved
+  - Owner decision: approved
+- ID: S-002
+  - Title: Nhắc lịch SMS/Email tự động
+  - Description: Gửi nhắc lịch trước 24h/2h.
+  - Scope impact: Tích hợp nhà cung cấp nhắn tin, theo dõi consent.
+  - Related screens/features: Cài đặt lịch hẹn, sở thích khách hàng
+  - Trade-offs: Giảm no-show vs. chi phí và tuân thủ.
+  - Estimated complexity: Medium
+  - Status: approved
+  - Owner decision: approved
+- ID: S-003
+  - Title: Hỗ trợ đa chi nhánh
+  - Description: Hỗ trợ nhiều cơ sở với nhân viên/dịch vụ tách riêng.
+  - Scope impact: Thay đổi mô hình dữ liệu, phân quyền theo chi nhánh, thay đổi báo cáo.
+  - Related screens/features: Settings, calendar, reports
+  - Trade-offs: Mở rộng quy mô vs. tăng độ phức tạp dữ liệu.
+  - Estimated complexity: High
+  - Status: approved
+  - Owner decision: approved
+- ID: S-004
+  - Title: Voucher / mã giảm giá
+  - Description: Áp dụng mã giảm giá khi thanh toán.
+  - Scope impact: Quy tắc giá, validation và báo cáo.
+  - Related screens/features: Payments, Admin promotions
+  - Trade-offs: Tăng giá trị marketing vs. phức tạp giá.
+  - Estimated complexity: Medium
+  - Status: proposed
+  - Owner decision: pending
+- ID: S-005
+  - Title: Loyalty / tích điểm
+  - Description: Tích điểm theo booking và đổi ưu đãi.
+  - Scope impact: Ledger điểm và quy tắc đổi.
+  - Related screens/features: Customer profile, payments
+  - Trade-offs: Giữ chân khách vs. tăng phức tạp vận hành.
+  - Estimated complexity: High
+  - Status: proposed
+  - Owner decision: pending
+- ID: S-006
+  - Title: Chatbot tư vấn
+  - Description: Trợ lý tự động tư vấn dịch vụ và FAQ.
+  - Scope impact: Tích hợp AI, monitoring, fallback UX.
+  - Related screens/features: Public site, support
+  - Trade-offs: Hỗ trợ tốt hơn vs. bảo trì AI.
+  - Estimated complexity: Medium
+  - Status: proposed
+  - Owner decision: pending
+- ID: S-007
+  - Title: Gợi ý dịch vụ
+  - Description: Gợi ý dịch vụ dựa trên hồ sơ và lịch sử.
+  - Scope impact: Tín hiệu dữ liệu, logic gợi ý.
+  - Related screens/features: Service detail, booking flow
+  - Trade-offs: Upsell tốt hơn vs. chi phí triển khai.
+  - Estimated complexity: Medium
+  - Status: proposed
+  - Owner decision: pending
+- ID: S-008
+  - Title: Tích hợp Google Maps
+  - Description: Hiển thị bản đồ và chỉ đường.
+  - Scope impact: API key và chi phí billing.
+  - Related screens/features: Spa info
+  - Trade-offs: UX tốt hơn vs. chi phí API.
+  - Estimated complexity: Low
+  - Status: proposed
+  - Owner decision: pending
+- ID: S-009
+  - Title: PWA / mobile app
+  - Description: Web offline-friendly và mobile wrapper.
+  - Scope impact: Build pipeline và phân phối store.
+  - Related screens/features: Toàn hệ thống
+  - Trade-offs: Mở rộng kênh vs. chi phí bảo trì.
+  - Estimated complexity: High
+  - Status: proposed
+  - Owner decision: pending
+- ID: S-010
+  - Title: Seed dữ liệu thật cho chi nhánh/dịch vụ/booking
+  - Description: Tạo dữ liệu thật trong database cho các entity cốt lõi để demo UI và luồng admin.
+  - Scope impact: Mở rộng schema và script seed.
+  - Related screens/features: Booking public, dashboard admin
+  - Trade-offs: Demo tốt hơn vs. thêm công việc data modeling và migration.
+  - Estimated complexity: Medium
+  - Status: approved
+  - Owner decision: approved
+- ID: S-011
+  - Title: Nối UI với dữ liệu branch/service/booking thật
+  - Description: Thay dữ liệu fixture bằng API lấy từ DB cho booking public và dashboard admin.
+  - Scope impact: API handlers, trạng thái loading của UI, mapping dữ liệu.
+  - Related screens/features: Booking flow, dashboard admin
+  - Trade-offs: Dữ liệu thật vs. phụ thuộc DB nhiều hơn.
+  - Estimated complexity: Medium
+  - Status: proposed
+  - Owner decision: pending
+- ID: S-012
+  - Title: Chọn therapist từ DB
+  - Description: Cho phép chọn therapist theo chi nhánh/dịch vụ từ DB trong booking flow.
+  - Scope impact: Mapping staff-service, API therapists public, cập nhật payload booking.
+  - Related screens/features: Booking flow, quản lý nhân viên
+  - Trade-offs: Match tốt hơn vs. thêm schema và công việc quản trị.
+  - Estimated complexity: Medium
+  - Status: approved
+  - Owner decision: approved

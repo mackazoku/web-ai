@@ -1,0 +1,31 @@
+{
+  "upcoming": [
+    {
+      "key": "restoration",
+      "date": "October 24, 2024",
+      "time": "14:00",
+      "duration": "90 min",
+      "therapistKey": "elena",
+      "status": "confirmed"
+    },
+    {
+      "key": "botanical",
+      "date": "November 02, 2024",
+      "time": "10:30",
+      "duration": "60 min",
+      "therapistKey": "marcus",
+      "status": "confirmed"
+    }
+  ],
+  "past": [
+    {
+      "key": "himalayan",
+      "date": "September 12, 2024",
+      "status": "completed"
+    }
+  ],
+  "notifications": {
+    "sms": true,
+    "email": true
+  }
+}

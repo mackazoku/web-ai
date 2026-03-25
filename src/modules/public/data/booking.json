@@ -1,0 +1,28 @@
+{
+  "timeSlots": ["09:00 AM", "10:30 AM", "01:00 PM", "02:30 PM", "04:00 PM"],
+  "services": [
+    {"key": "botanicalGlow", "duration": "60 Minutes", "price": "$145"},
+    {"key": "deepTissue", "duration": "90 Minutes", "price": "$185"},
+    {"key": "restorative", "duration": "75 Minutes", "price": "$165"}
+  ],
+  "branches": [
+    {"key": "downtown", "label": "Downtown Atelier"},
+    {"key": "riverside", "label": "Riverside Retreat"},
+    {"key": "garden", "label": "Garden House"}
+  ],
+  "therapists": [
+    {"key": "elena", "rating": "4.9", "reviews": "124"},
+    {"key": "julian", "rating": "5.0", "reviews": "89"}
+  ],
+  "summary": {
+    "serviceKey": "botanicalGlow",
+    "duration": "60 Minutes",
+    "ingredients": "Organic Extracts",
+    "date": "Oct 9, 2024",
+    "time": "09:00 AM",
+    "staffKey": "elena",
+    "subtotal": "$145.00",
+    "serviceFee": "$5.00",
+    "total": "$150.00"
+  }
+}

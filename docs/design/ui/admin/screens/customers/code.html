@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Bookings Mock</title>
+    <style>
+      :root { --bg: #f7f3ee; --olive: #5f6b4a; --border: #e5dfd4; --muted: #7b746b; }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: "Georgia", serif; background: var(--bg); color: #1e1a16; }
+      header { padding: 24px 64px; border-bottom: 1px solid var(--border); display:flex; justify-content:space-between; }
+      main { padding: 40px 64px; display: grid; grid-template-columns: 2fr 1fr; gap: 28px; }
+      .card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 18px; margin-bottom: 16px; }
+      .btn { padding: 10px 16px; border-radius: 12px; border: 1px solid var(--border); font-family: "Inter", sans-serif; }
+      .btn.primary { background: var(--olive); color: #fff; border-color: transparent; }
+      .rail { display: grid; gap: 16px; }
+      .toggle { display:flex; justify-content:space-between; font-family: "Inter", sans-serif; color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>The Sanctuary</div>
+      <div style="font-family:'Inter',sans-serif; color:var(--muted);">Your Retreats</div>
+    </header>
+    <main>
+      <div>
+        <h2>Upcoming</h2>
+        <div class="card">
+          <h3>The Restoration Session</h3>
+          <p style="color:var(--muted);">Oct 24, 2024 · 14:00 · 90 min</p>
+          <div style="display:flex; gap:10px;">
+            <div class="btn primary">Reschedule</div>
+            <div class="btn">Cancel</div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Botanical Radiance</h3>
+          <p style="color:var(--muted);">Nov 02, 2024 · 10:30 · 60 min</p>
+          <div style="display:flex; gap:10px;">
+            <div class="btn primary">Reschedule</div>
+            <div class="btn">Cancel</div>
+          </div>
+        </div>
+        <h2>Past Journeys</h2>
+        <div class="card">
+          <h3>Himalayan Salt Sauna</h3>
+          <p style="color:var(--muted);">Completed · Sep 12, 2024</p>
+        </div>
+      </div>
+      <div class="rail">
+        <div class="card">
+          <h3>Stay Connected</h3>
+          <div class="toggle"><span>Email Updates</span><span>On</span></div>
+          <div class="toggle"><span>SMS Notifications</span><span>Off</span></div>
+        </div>
+        <div class="card" style="background: var(--olive); color:#fff;">
+          <h3>The Inner Circle</h3>
+          <p>Members enjoy priority booking windows.</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
