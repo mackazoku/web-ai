@@ -351,6 +351,13 @@
     },
     "title": "Hành trình của bạn",
     "subtitle": "Quản lý lịch sắp tới và xem lại những khoảnh khắc an yên đã trải nghiệm cùng chúng tôi.",
+    "emptyUpcoming": "Chưa có lịch hẹn sắp tới.",
+    "emptyPast": "Chưa có lịch hẹn đã qua.",
+    "loadError": "Không thể tải lịch hẹn. Vui lòng thử lại.",
+    "defaultCategory": "Dịch vụ",
+    "defaultTitle": "Nghi thức tại spa",
+    "durationMinutes": "{count} phút",
+    "unknownTherapist": "Chuyên viên phù hợp",
     "upcoming": {
       "title": "Sắp tới",
       "count": "{count} lịch hẹn",
@@ -383,8 +390,10 @@
       "marcus": "Marcus Thorne"
     },
     "status": {
+      "pending": "Đang chờ",
       "confirmed": "Đã xác nhận",
-      "completed": "Hoàn tất"
+      "completed": "Hoàn tất",
+      "cancelled": "Đã hủy"
     },
     "stayConnected": {
       "title": "Kết nối thông báo",
@@ -401,5 +410,30 @@
       "body": "Hội viên giảm 15% cho mọi liệu trình và ưu tiên khung giờ đặt.",
       "cta": "Khám phá hội viên"
     }
+  },
+  "Login": {
+    "badge": "Khách hàng",
+    "title": "Chào mừng trở lại",
+    "subtitle": "Đăng nhập để tiếp tục đặt lịch.",
+    "emailLabel": "Email",
+    "passwordLabel": "Mật khẩu",
+    "submit": "Đăng nhập",
+    "loading": "Đang đăng nhập...",
+    "invalidCredentials": "Email hoặc mật khẩu không đúng."
+  },
+  "Register": {
+    "badge": "Tạo tài khoản",
+    "title": "Bắt đầu đặt lịch",
+    "subtitle": "Tạo tài khoản để đặt lịch ngay.",
+    "emailLabel": "Email",
+    "passwordLabel": "Mật khẩu",
+    "submit": "Tạo tài khoản",
+    "loading": "Đang tạo tài khoản...",
+    "errorGeneric": "Có lỗi xảy ra. Vui lòng thử lại.",
+    "errorDuplicate": "Email này đã được đăng ký.",
+    "errorInvalid": "Vui lòng kiểm tra lại thông tin.",
+    "errorEmailRequired": "Vui lòng nhập email.",
+    "errorEmailInvalid": "Email không hợp lệ.",
+    "errorPasswordRequired": "Vui lòng nhập mật khẩu."
   }
 }

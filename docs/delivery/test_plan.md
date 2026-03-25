@@ -225,3 +225,9 @@ Define verification strategy for implemented features.
 - environment: local
 - result: partial
 - notes: Updated calendar header to hourly labels; tests not run yet.
+
+### 2026-03-25 23:55 (local)
+- executor: TBD
+- environment: local
+- result: partial
+- notes: Added customer registration flow; tests not run yet.

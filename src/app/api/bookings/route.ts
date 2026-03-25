@@ -1,7 +1,9 @@
 import {NextResponse} from 'next/server';
+import {getServerSession} from 'next-auth';
 import {z} from 'zod';
 
 import {prisma} from '@/modules/shared/db/prisma';
+import {authOptions} from '@/modules/admin/auth/auth-options';
 
 const bookingSchema = z.object({
   customerName: z.string().min(1),
@@ -16,6 +18,15 @@ const bookingSchema = z.object({
 });
 
 export async function POST(request: Request) {
+  const session = await getServerSession(authOptions);
+  const user = session?.user;
+  if (!user || user.role !== 'customer' || user.status !== 'active' || !user.id) {
+    return NextResponse.json(
+      {code: 'unauthorized', message: 'Login required.'},
+      {status: 401},
+    );
+  }
+
   const body = await request.json().catch(() => null);
   const parsed = bookingSchema.safeParse(body);
 
@@ -102,6 +113,7 @@ export async function POST(request: Request) {
     data: {
       branchId: branch.id,
       staffId,
+      customerId: user.id,
       customerName: payload.customerName,
       customerEmail: payload.customerEmail,
       customerPhone: payload.customerPhone ?? null,

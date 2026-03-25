@@ -11,6 +11,7 @@ enum Role {
   admin
   receptionist
   staff
+  customer
 }
 
 enum UserStatus {
@@ -71,6 +72,7 @@ model User {
 
   branch   Branch?  @relation(fields: [branchId], references: [id])
   bookings Booking[] @relation("BookingStaff")
+  customerBookings Booking[] @relation("BookingCustomer")
   staffServices StaffService[]
 }
 
@@ -78,6 +80,7 @@ model Booking {
   id            String        @id @default(cuid())
   branchId      String
   staffId       String?
+  customerId    String?
   customerName  String
   customerEmail String
   customerPhone String?
@@ -91,7 +94,10 @@ model Booking {
 
   branch   Branch           @relation(fields: [branchId], references: [id])
   staff    User?            @relation("BookingStaff", fields: [staffId], references: [id])
+  customer User?            @relation("BookingCustomer", fields: [customerId], references: [id])
   services BookingService[]
+
+  @@index([customerId])
 }
 
 model BookingService {

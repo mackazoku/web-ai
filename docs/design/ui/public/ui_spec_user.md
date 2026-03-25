@@ -47,3 +47,12 @@ Behavior notes:
 
 ### 5.3 My Bookings
 Location: `docs/design/ui/public/screens/my_bookings/`
+
+### 5.4 Registration
+Location: `src/app/[locale]/(public)/register/page.tsx`
+
+Behavior notes:
+- Email + password fields with required validation.
+- Client-side validation shows inline error message before submission.
+- Server errors map to clear messages (duplicate email, invalid input).
+- Successful registration redirects to login with callback to booking.

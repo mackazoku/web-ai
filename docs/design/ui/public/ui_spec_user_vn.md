@@ -47,3 +47,12 @@ Ghi chú hành vi:
 
 ### 5.3 My Bookings
 Vị trí: `docs/design/ui/public/screens/my_bookings/`
+
+### 5.4 Đăng ký
+Vị trí: `src/app/[locale]/(public)/register/page.tsx`
+
+Ghi chú hành vi:
+- Trường email + mật khẩu bắt buộc.
+- Validation phía client hiển thị lỗi trước khi submit.
+- Lỗi từ server hiển thị rõ (trùng email, dữ liệu không hợp lệ).
+- Đăng ký thành công chuyển sang login với callback về booking.

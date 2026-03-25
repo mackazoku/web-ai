@@ -10,6 +10,19 @@ Track implementation execution history per task with links, outcomes, and notabl
 - Delivery notes
 - Risks / follow-up
 
+### 2026-03-25 - Customer registration flow
+- Scope:
+  - Added public registration screen and API for email + password sign-up.
+  - Added validation and duplicate email handling.
+  - Updated i18n strings for registration.
+- Decision:
+  - Keep credentials-only registration without email verification.
+- Delivery notes:
+  - Successful registration redirects to login with booking callback.
+  - Registration API returns minimal user payload.
+- Risks / follow-up:
+  - Confirm password policy and email normalization requirements.
+
 ### 2026-03-19 - Public UI screens implementation (Home, Booking, Customer Profile)
 - Scope:
   - Implemented public home, booking flow, and customer profile layouts.

@@ -10,6 +10,19 @@ Theo dõi lịch sử thực thi theo task, quyết định và ghi chú.
 - Ghi chú triển khai
 - Rủi ro / việc cần theo dõi
 
+### 2026-03-25 - Luồng đăng ký khách hàng
+- Phạm vi:
+  - Thêm màn hình đăng ký public và API đăng ký bằng email + mật khẩu.
+  - Bổ sung validation và xử lý email trùng.
+  - Cập nhật i18n cho màn đăng ký.
+- Quyết định:
+  - Giữ đăng ký bằng credentials, không xác thực email.
+- Ghi chú triển khai:
+  - Đăng ký thành công chuyển sang login với callback về booking.
+  - API trả payload user tối thiểu.
+- Rủi ro / theo dõi:
+  - Xác nhận chính sách mật khẩu và chuẩn hóa email.
+
 ### 2026-03-08 - Triển khai UI public (Home, Booking, Customer Profile)
 - Phạm vi:
   - Triển khai layout public home, booking flow và customer profile.

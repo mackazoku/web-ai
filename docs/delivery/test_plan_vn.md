@@ -225,3 +225,9 @@ Xác định chiến lược kiểm thử cho các tính năng đã triển khai
 - environment: local
 - result: partial
 - notes: Cập nhật header calendar hiển thị theo giờ; chưa chạy test.
+
+### 2026-03-25 23:55 (local)
+- executor: TBD
+- environment: local
+- result: partial
+- notes: Thêm luồng đăng ký khách hàng; chưa chạy test.

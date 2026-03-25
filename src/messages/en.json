@@ -351,6 +351,13 @@
     },
     "title": "Your Retreats",
     "subtitle": "Manage your upcoming journeys and revisit the moments of calm you've experienced with us.",
+    "emptyUpcoming": "No upcoming bookings yet.",
+    "emptyPast": "No past bookings yet.",
+    "loadError": "We couldn't load your bookings. Please try again.",
+    "defaultCategory": "Service",
+    "defaultTitle": "Sanctuary ritual",
+    "durationMinutes": "{count} min",
+    "unknownTherapist": "Any available therapist",
     "upcoming": {
       "title": "Upcoming",
       "count": "{count} reservations",
@@ -383,8 +390,10 @@
       "marcus": "Marcus Thorne"
     },
     "status": {
+      "pending": "Pending",
       "confirmed": "Confirmed",
-      "completed": "Completed"
+      "completed": "Completed",
+      "cancelled": "Cancelled"
     },
     "stayConnected": {
       "title": "Stay connected",
@@ -401,5 +410,30 @@
       "body": "Members enjoy 15% off all rituals and priority booking windows.",
       "cta": "Explore membership"
     }
+  },
+  "Login": {
+    "badge": "Customer access",
+    "title": "Welcome back",
+    "subtitle": "Sign in to continue your booking journey.",
+    "emailLabel": "Email address",
+    "passwordLabel": "Password",
+    "submit": "Sign in",
+    "loading": "Signing in...",
+    "invalidCredentials": "Invalid email or password."
+  },
+  "Register": {
+    "badge": "Create account",
+    "title": "Join the sanctuary",
+    "subtitle": "Create your account to book instantly.",
+    "emailLabel": "Email address",
+    "passwordLabel": "Password",
+    "submit": "Create account",
+    "loading": "Creating account...",
+    "errorGeneric": "Something went wrong. Please try again.",
+    "errorDuplicate": "This email is already registered.",
+    "errorInvalid": "Please check your details and try again.",
+    "errorEmailRequired": "Email is required.",
+    "errorEmailInvalid": "Enter a valid email address.",
+    "errorPasswordRequired": "Password is required."
   }
 }
