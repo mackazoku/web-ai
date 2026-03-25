@@ -48,6 +48,10 @@ if [ "$TARGET" = "vercel" ]; then
     exit 1
   fi
 
+  if [ -n "${VERCEL_DATABASE_URL:-}" ]; then
+    export DATABASE_URL="$VERCEL_DATABASE_URL"
+  fi
+
   VERCEL_ARGS=("--prod")
   if [ -n "${VERCEL_SCOPE:-}" ]; then
     VERCEL_ARGS+=("--scope" "$VERCEL_SCOPE")
@@ -71,6 +75,11 @@ prompt_if_empty GCP_SERVICE "Cloud Run service name: "
 ALLOW_UNAUTH="${GCP_ALLOW_UNAUTH:-true}"
 ENV_FILE="${GCP_ENV_FILE:-}"
 
+if [ -z "${GCP_DATABASE_URL:-}" ] && [ -z "$ENV_FILE" ]; then
+  echo "GCP_DATABASE_URL is required for Cloud Run unless GCP_ENV_FILE is provided." >&2
+  exit 1
+fi
+
 GCLOUD_ARGS=(
   "run" "deploy" "$GCP_SERVICE"
   "--project" "$GCP_PROJECT"
@@ -81,6 +90,8 @@ GCLOUD_ARGS=(
 
 if [ -n "$ENV_FILE" ]; then
   GCLOUD_ARGS+=("--env-vars-file" "$ENV_FILE")
+else
+  GCLOUD_ARGS+=("--set-env-vars" "DATABASE_URL=$GCP_DATABASE_URL")
 fi
 
 if [ -n "${GCP_CPU:-}" ]; then

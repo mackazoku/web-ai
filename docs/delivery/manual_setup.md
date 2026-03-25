@@ -47,6 +47,7 @@ List manual steps required for environments and deployments.
     - Enable automatic deployments from `main`.
     - Set `NEXTAUTH_SECRET` and `NEXTAUTH_URL`.
     - Remove legacy admin seed credentials when DB users are live.
+    - Optional: set `VERCEL_DATABASE_URL` when using `scripts/deploy.sh` for Vercel.
   - Verification:
     - Access home page and admin page in production.
     - Run a test booking flow and confirm email delivery.
@@ -59,10 +60,13 @@ List manual steps required for environments and deployments.
   - Prerequisites: GCP project, Cloud Run enabled, gcloud CLI authenticated
   - Steps:
     - Enable Cloud Run + Cloud Build APIs for the project.
-    - Configure `DATABASE_URL`, `NEXTAUTH_SECRET`, `NEXTAUTH_URL`, and OAuth secrets in GCP (Secret Manager or env vars).
+    - Provision Cloud SQL (Postgres) and create a database/user.
+    - Configure `DATABASE_URL` for Cloud SQL (e.g. via Secret Manager or env vars).
+    - Configure `NEXTAUTH_SECRET`, `NEXTAUTH_URL`, and OAuth secrets in GCP (Secret Manager or env vars).
+    - Bind Cloud Run to Cloud SQL instance (Cloud SQL connection) if using private IP.
     - Ensure `gcloud auth login` + `gcloud config set project` are done.
     - Deploy using `scripts/deploy.sh` and choose **GCP Cloud Run**.
-    - Optional: provide `GCP_ENV_FILE` for environment variables and `GCP_SECRETS` for Secret Manager bindings.
+    - Provide `GCP_DATABASE_URL` or `GCP_ENV_FILE` for env vars and `GCP_SECRETS` for Secret Manager bindings.
     - Map custom domain in Cloud Run if needed.
   - Verification:
     - Access public and admin pages in production.
