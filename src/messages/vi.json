@@ -182,6 +182,52 @@
       "disable": "Không thể vô hiệu user."
     }
   },
+  "AdminServices": {
+    "breadcrumb": {
+      "admin": "Admin",
+      "services": "Dịch vụ"
+    },
+    "title": "Quản lý dịch vụ",
+    "subtitle": "Tuyển chọn và quản lý các trải nghiệm tinh tế trong The Sanctuary.",
+    "add": "Thêm dịch vụ mới",
+    "search": {
+      "placeholder": "Tìm dịch vụ..."
+    },
+    "filters": {
+      "status": "Trạng thái",
+      "duration": "Thời lượng",
+      "all": "Tất cả"
+    },
+    "status": {
+      "active": "Đang hoạt động",
+      "draft": "Bản nháp",
+      "hidden": "Ẩn"
+    },
+    "actions": {
+      "manage": "Quản lý",
+      "edit": "Chỉnh sửa",
+      "visibility": "Hiển thị"
+    },
+    "insights": {
+      "title": "Sức khỏe dịch vụ",
+      "total": "Tổng dịch vụ",
+      "active": "Đang hoạt động",
+      "draft": "Bản nháp"
+    },
+    "fallback": {
+      "description": "Nghi thức được tuyển chọn để phục hồi cân bằng và an yên."
+    },
+    "duration": "{minutes} phút",
+    "empty": {
+      "title": "Chưa có dịch vụ",
+      "description": "Tạo dịch vụ đầu tiên để bắt đầu xây dựng danh mục.",
+      "action": "Thêm dịch vụ"
+    },
+    "error": {
+      "title": "Không thể tải dịch vụ",
+      "retry": "Thử lại"
+    }
+  },
   "PublicHome": {
     "brand": "The Sanctuary",
     "nav": {

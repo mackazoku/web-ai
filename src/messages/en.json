@@ -182,6 +182,52 @@
       "disable": "Failed to disable user."
     }
   },
+  "AdminServices": {
+    "breadcrumb": {
+      "admin": "Admin",
+      "services": "Services"
+    },
+    "title": "Service curation",
+    "subtitle": "Curate and manage the ethereal experiences offered within The Sanctuary's walls.",
+    "add": "Add New Service",
+    "search": {
+      "placeholder": "Search services..."
+    },
+    "filters": {
+      "status": "Status",
+      "duration": "Duration",
+      "all": "All"
+    },
+    "status": {
+      "active": "Active",
+      "draft": "Draft",
+      "hidden": "Hidden"
+    },
+    "actions": {
+      "manage": "Manage",
+      "edit": "Edit",
+      "visibility": "Visibility"
+    },
+    "insights": {
+      "title": "Service health",
+      "total": "Total services",
+      "active": "Active offerings",
+      "draft": "Draft services"
+    },
+    "fallback": {
+      "description": "A curated ritual crafted to restore balance and calm."
+    },
+    "duration": "{minutes} min",
+    "empty": {
+      "title": "No services yet",
+      "description": "Create your first service to start building the catalog.",
+      "action": "Add service"
+    },
+    "error": {
+      "title": "Unable to load services",
+      "retry": "Try again"
+    }
+  },
   "PublicHome": {
     "brand": "The Sanctuary",
     "nav": {

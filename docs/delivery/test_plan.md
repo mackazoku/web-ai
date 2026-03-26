@@ -19,6 +19,12 @@ Checklist:
 - result (pass/fail/partial)
 - notes
 
+### 2026-03-26 10:30 (local)
+- executor: TBD
+- environment: local
+- result: partial
+- notes: Added admin services screen UI; tests not run yet.
+
 ### 2026-03-25 12:40 (local)
 - executor: TBD
 - environment: local
