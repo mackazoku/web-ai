@@ -1,11 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if [ -f ".env.local" ]; then
+  set -a
+  # shellcheck disable=SC1091
+  source ".env.local"
+  set +a
+fi
+
 confirm_choice() {
   local choice
-  echo "Select deployment target:"
-  echo "  1) Vercel"
-  echo "  2) GCP Cloud Run"
+  echo "Select deployment target:" >&2
+  echo "  1) Vercel" >&2
+  echo "  2) GCP Cloud Run" >&2
   read -r -p "Choose (1/2): " choice
   case "$choice" in
     1) echo "vercel" ;;
@@ -43,6 +50,12 @@ TARGET=$(confirm_choice)
 
 if [ "$TARGET" = "vercel" ]; then
   require_cmd npx
+  if [ -z "${VERCEL_PROJECT:-}" ] && [ -n "${PROJECT_NAME:-}" ]; then
+    export VERCEL_PROJECT="$PROJECT_NAME"
+  fi
+  if [ -z "${VERCEL_SCOPE:-}" ] && [ -n "${SCOPE:-}" ]; then
+    export VERCEL_SCOPE="$SCOPE"
+  fi
   if [ -z "${VERCEL_TOKEN:-}" ]; then
     echo "VERCEL_TOKEN is required for Vercel deploy." >&2
     exit 1
@@ -57,7 +70,7 @@ if [ "$TARGET" = "vercel" ]; then
     VERCEL_ARGS+=("--scope" "$VERCEL_SCOPE")
   fi
   if [ -n "${VERCEL_PROJECT:-}" ]; then
-    VERCEL_ARGS+=("--project" "$VERCEL_PROJECT")
+    VERCEL_ARGS+=("--name" "$VERCEL_PROJECT")
   fi
   VERCEL_ARGS+=("--token" "$VERCEL_TOKEN")
 
