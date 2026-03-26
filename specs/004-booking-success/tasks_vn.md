@@ -82,7 +82,7 @@ description: "Danh sách công việc cho Dialog đặt vé thành công"
 
 **Purpose**: Cập nhật tài liệu và xác minh
 
-- [X] T009 [P] Cập nhật ghi chú verification trong /Users/dongdm/Develop/Source/mackazoku/web-ai/legacy_docs/delivery/test_plan.md
+- [X] T009 [P] Cập nhật ghi chú verification trong /Users/dongdm/Develop/Source/mackazoku/web-ai/docs/delivery/test_plan.md
 - [X] T010 Cập nhật trạng thái task và ghi chú verification trong /Users/dongdm/Develop/Source/mackazoku/web-ai/specs/004-booking-success/tasks.md
 
 ---

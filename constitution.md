@@ -20,7 +20,7 @@ Prefer small, targeted changes. Avoid unrelated refactors.
 ## Quality & Verification
 - No hardcoded UI strings; use i18n keys.
 - New API routes require validation (Zod).
-- Record verification steps in `specs/*/tasks.md` and update `legacy_docs/delivery/test_plan.md` until fully retired.
+- Record verification steps in `specs/*/tasks.md` and update `docs/delivery/test_plan.md` until fully retired.
 
 ## Operations & Manual Setup
 - Manual steps must be tracked in `specs/*/quickstart.md`.

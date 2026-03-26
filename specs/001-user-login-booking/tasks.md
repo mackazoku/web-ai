@@ -12,7 +12,7 @@ Each task includes: owner, status, last_updated (YYYY-MM-DD), doc_impact, manual
 | T-005 | Enforce auth in booking API + add /api/bookings/my | codex | done | 2026-03-25 | contracts | no |
 | T-006 | Gate public booking page and refactor client component | codex | done | 2026-03-25 | spec | no |
 | T-007 | Replace My Bookings fixtures with API data + auth gate | codex | done | 2026-03-25 | spec | no |
-| T-008 | Update verification notes in legacy_docs/delivery/test_plan.md | codex | done | 2026-03-25 | test_plan | no |
+| T-008 | Update verification notes in docs/delivery/test_plan.md | codex | done | 2026-03-25 | test_plan | no |
 
 ## Verification Notes
 - Migration creation blocked because `DATABASE_URL` is not set in the environment.

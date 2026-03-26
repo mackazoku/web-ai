@@ -30,7 +30,7 @@ Add a booking success dialog based on the approved design and redirect customers
 - Bilingual documentation: `_vn` artifacts included. PASS
 - Explicit approval gates: UI flow change requires approval before implementation. PASS
 - Minimal, pragmatic changes: Scope limited to success dialog + redirect. PASS
-- Quality & verification: No hardcoded strings; record verification in tasks + legacy test plan. PASS
+- Quality & verification: No hardcoded strings; record verification in tasks + docs/delivery/test_plan.md. PASS
 - Operations & manual setup: No new secrets required. PASS
 
 ## Project Structure

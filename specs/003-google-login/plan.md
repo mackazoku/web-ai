@@ -30,7 +30,7 @@ Add customer Google sign-in to the public login flow, automatically create custo
 - Bilingual documentation: `_vn` artifacts included. PASS
 - Explicit approval gates: OAuth changes require approval before implementation. PASS
 - Minimal, pragmatic changes: Scope limited to customer Google sign-in. PASS
-- Quality & verification: No hardcoded strings; validation for error handling; record verification in tasks + legacy test plan. PASS
+- Quality & verification: No hardcoded strings; validation for error handling; record verification in tasks + docs/delivery/test_plan.md. PASS
 - Operations & manual setup: Google OAuth secrets must be documented. PASS
 
 ## Project Structure

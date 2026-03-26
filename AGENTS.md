@@ -50,7 +50,7 @@ Coding before completing and updating documentation is NOT allowed.
 ### Definition of Done (After Coding)
 - Code is implemented and analyzed/tested for changed scope.
 - Status is updated in `specs/<feature>/tasks.md`.
-- Verification notes are recorded in `specs/<feature>/tasks.md` and `legacy_docs/delivery/test_plan.md` until fully retired.
+- Verification notes are recorded in `specs/<feature>/tasks.md` and `docs/delivery/test_plan.md` until fully retired.
 - Manual steps are updated in `specs/<feature>/quickstart.md` (or explicitly marked none).
 
 ---
@@ -204,9 +204,10 @@ Before implementation, the agent must confirm:
 5. Execute coding tasks.
 6. Review, fix lint issues, and test code.
 7. Update `specs/<feature>/tasks.md` with status and verification notes.
-8. Update `legacy_docs/delivery/test_plan.md` until fully retired.
+8. Update `docs/delivery/test_plan.md` until fully retired.
 9. Update `specs/<feature>/quickstart.md` if any manual setup is required.
 10. Ensure each changed task item includes owner, status, last_updated, doc_impact, manual_setup_required.
+11. If any design in `docs/design/` is added or modified, review related UI specs and update all impacted docs and tasks to stay consistent.
 
 ---
 
@@ -230,7 +231,7 @@ Before declaring work "done", the agent MUST explicitly state:
 - Architecture/flow/security/runtime design change: `specs/<feature>/research.md`
 - Task breakdown/progress/dependency change: `specs/<feature>/tasks.md`
 - Implementation execution note: `specs/<feature>/tasks.md`
-- Verification strategy/result update: `legacy_docs/delivery/test_plan.md`
+- Verification strategy/result update: `docs/delivery/test_plan.md`
 - Manual setup action required: `specs/<feature>/quickstart.md`
 
 ---

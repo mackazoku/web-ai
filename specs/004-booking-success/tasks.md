@@ -82,7 +82,7 @@ description: "Task list for Booking Success Dialog"
 
 **Purpose**: Documentation and verification updates
 
-- [X] T009 [P] Update verification notes in /Users/dongdm/Develop/Source/mackazoku/web-ai/legacy_docs/delivery/test_plan.md
+- [X] T009 [P] Update verification notes in /Users/dongdm/Develop/Source/mackazoku/web-ai/docs/delivery/test_plan.md
 - [X] T010 Update task status and verification notes in /Users/dongdm/Develop/Source/mackazoku/web-ai/specs/004-booking-success/tasks.md
 
 ---

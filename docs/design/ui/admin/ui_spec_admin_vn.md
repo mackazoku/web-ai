@@ -59,6 +59,9 @@ Vị trí: `docs/design/ui/admin/screens/appointment_detail_drawer/`
 
 ### 5.7 Services
 Vị trí: `docs/design/ui/admin/screens/services/`
+Ghi chú hành vi:
+- Tuân theo quy tắc thị giác và component trong `docs/design/ui/admin/screens/services/DESIGN.md`.
+- Ưu tiên phân tầng bằng tone và áp dụng quy tắc "no-line" để phân tách section.
 
 ### 5.8 Staff
 Vị trí: `docs/design/ui/admin/screens/staff/`

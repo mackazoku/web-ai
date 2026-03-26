@@ -86,7 +86,7 @@ description: "Task list for In-App Notifications"
 
 **Purpose**: Documentation and verification updates
 
-- [ ] T013 [P] Update verification notes in /Users/dongdm/Develop/Source/mackazoku/web-ai/legacy_docs/delivery/test_plan.md
+- [ ] T013 [P] Update verification notes in /Users/dongdm/Develop/Source/mackazoku/web-ai/docs/delivery/test_plan.md
 - [ ] T014 Update task status and verification notes in /Users/dongdm/Develop/Source/mackazoku/web-ai/specs/005-app-notifications/tasks.md
 
 ---

@@ -59,6 +59,9 @@ Location: `docs/design/ui/admin/screens/appointment_detail_drawer/`
 
 ### 5.7 Services
 Location: `docs/design/ui/admin/screens/services/`
+Behavior notes:
+- Follow the visual system and component rules defined in `docs/design/ui/admin/screens/services/DESIGN.md`.
+- Emphasize tonal layering and the "no-line" rule for section separation.
 
 ### 5.8 Staff
 Location: `docs/design/ui/admin/screens/staff/`

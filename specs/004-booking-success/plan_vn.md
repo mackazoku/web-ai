@@ -30,7 +30,7 @@ Thêm dialog đặt vé thành công theo design đã duyệt và điều hướ
 - Bilingual documentation: Đã có `_vn` cho feature. PASS
 - Explicit approval gates: Thay đổi luồng UI cần approval trước khi implement. PASS
 - Minimal, pragmatic changes: Phạm vi gọn cho dialog + redirect. PASS
-- Quality & verification: Không hardcode strings; ghi nhận verification trong tasks + legacy test plan. PASS
+- Quality & verification: Không hardcode strings; ghi nhận verification trong tasks + docs/delivery/test_plan.md. PASS
 - Operations & manual setup: Không cần secrets mới. PASS
 
 ## Project Structure

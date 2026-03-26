@@ -30,7 +30,7 @@ Add in-app notifications for admin and customer using polling, a shared notifica
 - Bilingual documentation: `_vn` artifacts included. PASS
 - Explicit approval gates: UI + data-model changes require approval. PASS
 - Minimal, pragmatic changes: Polling, no realtime infra. PASS
-- Quality & verification: No hardcoded strings; record verification in tasks + legacy test plan. PASS
+- Quality & verification: No hardcoded strings; record verification in tasks + docs/delivery/test_plan.md. PASS
 - Operations & manual setup: No new secrets required. PASS
 
 ## Project Structure

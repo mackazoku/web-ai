@@ -20,7 +20,7 @@ Mọi thay đổi ảnh hưởng scope, logic, API hoặc data model đều cầ
 ## Chất lượng & Kiểm chứng
 - Không hardcode text UI; dùng i18n.
 - API mới phải có validation (Zod).
-- Ghi lại bước kiểm chứng trong `specs/*/tasks.md` và cập nhật `legacy_docs/delivery/test_plan.md` cho tới khi retire hoàn toàn.
+- Ghi lại bước kiểm chứng trong `specs/*/tasks.md` và cập nhật `docs/delivery/test_plan.md` cho tới khi retire hoàn toàn.
 
 ## Vận hành & Manual Setup
 - Mọi bước thủ công phải ghi trong `specs/*/quickstart.md`.

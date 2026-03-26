@@ -1,48 +1,268 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>UI Placeholder</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
-        background: #f2efe7;
-        color: #111111;
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#1a1c1c",
+              "tertiary-fixed-dim": "#bfc9ba",
+              "secondary-container": "#e8e2d6",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#eeeeed",
+              "on-primary": "#ffffff",
+              "inverse-surface": "#2f3130",
+              "surface": "#faf9f8",
+              "on-primary-fixed-variant": "#3c4c2b",
+              "on-surface-variant": "#44483f",
+              "on-tertiary-fixed-variant": "#40493e",
+              "on-primary-container": "#334223",
+              "tertiary-container": "#a2ac9d",
+              "surface-dim": "#dadad9",
+              "surface-bright": "#faf9f8",
+              "on-secondary-container": "#68645b",
+              "on-tertiary-fixed": "#151e14",
+              "surface-tint": "#536441",
+              "outline-variant": "#c5c8bc",
+              "on-primary-fixed": "#111f05",
+              "outline": "#75786e",
+              "primary-fixed-dim": "#bacda3",
+              "primary-fixed": "#d6e9bd",
+              "surface-container-high": "#e9e8e7",
+              "secondary": "#625e55",
+              "primary-container": "#9caf87",
+              "on-error-container": "#93000a",
+              "surface-container-highest": "#e3e2e1",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#4a473e",
+              "background": "#faf9f8",
+              "surface-container-low": "#f4f3f2",
+              "secondary-fixed": "#e8e2d6",
+              "tertiary": "#576154",
+              "surface-variant": "#e3e2e1",
+              "secondary-fixed-dim": "#cbc6ba",
+              "on-surface": "#1a1c1c",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "inverse-primary": "#bacda3",
+              "tertiary-fixed": "#dbe6d5",
+              "on-secondary-fixed": "#1e1c14",
+              "primary": "#536441",
+              "on-tertiary-container": "#374035",
+              "error": "#ba1a1a",
+              "inverse-on-surface": "#f1f0f0",
+              "on-secondary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
       }
-      main {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 40px;
-      }
-      .card {
-        max-width: 720px;
-        width: 100%;
-        background: #ffffff;
-        border: 1px solid #e6e1d4;
-        border-radius: 20px;
-        padding: 32px;
-        box-shadow: 0 24px 60px -40px rgba(0, 0, 0, 0.35);
-      }
-      h1 {
-        font-size: 28px;
-        margin: 0 0 12px 0;
-      }
-      p {
-        margin: 0;
-        color: #4a4a4a;
-      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
     </style>
-  </head>
-  <body>
-    <main>
-      <div class="card">
-        <h1>UI Placeholder</h1>
-        <p>This screen will be replaced by the final design assets.</p>
-      </div>
-    </main>
-  </body>
-</html>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-screen w-64 bg-[#f4f3f2] dark:bg-[#1a1c1c] py-8 sticky top-0">
+<div class="px-8 mb-12">
+<h1 class="font-serif text-2xl text-[#536441] italic">Atelier Admin</h1>
+<p class="text-xs uppercase tracking-widest text-outline mt-1 font-light">Management Suite</p>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Dashboard -->
+<a class="text-[#75786e] dark:text-[#c5c8bc] px-8 py-3 flex items-center gap-3 transition-all hover:bg-[#e3e2e1] dark:hover:bg-[#252726]" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-light">Dashboard</span>
+</a>
+<!-- Services (ACTIVE) -->
+<a class="bg-[#ffffff] dark:bg-[#252726] text-[#536441] dark:text-[#ffffff] rounded-l-full ml-4 pl-4 py-3 font-semibold flex items-center gap-3 shadow-sm" href="#">
+<span class="material-symbols-outlined" data-icon="spa" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="">Services</span>
+</a>
+<!-- Staff -->
+<a class="text-[#75786e] dark:text-[#c5c8bc] px-8 py-3 flex items-center gap-3 transition-all hover:bg-[#e3e2e1] dark:hover:bg-[#252726]" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-light">Staff</span>
+</a>
+<!-- Reports -->
+<a class="text-[#75786e] dark:text-[#c5c8bc] px-8 py-3 flex items-center gap-3 transition-all hover:bg-[#e3e2e1] dark:hover:bg-[#252726]" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-light">Reports</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary py-4 rounded-xl font-medium flex items-center justify-center gap-2 shadow-[0_32px_32px_-4px_rgba(26,28,28,0.06)] hover:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                New Booking
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 min-h-screen px-8 md:px-16 py-12">
+<!-- Top Header Area -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div class="space-y-2">
+<nav class="text-xs uppercase tracking-[0.2em] text-outline flex items-center gap-2 mb-4">
+<span>Admin</span>
+<span class="material-symbols-outlined text-[10px]">chevron_right</span>
+<span class="text-primary font-bold">Services</span>
+</nav>
+<h2 class="font-serif text-5xl md:text-6xl text-on-background tracking-tight italic">Quản Lý Dịch Vụ</h2>
+<p class="text-on-surface-variant font-light max-w-md mt-4 leading-relaxed">Curate and manage the ethereal experiences offered within The Sanctuary's walls.</p>
+</div>
+<button class="bg-surface-container-highest text-primary px-8 py-4 rounded-xl font-medium flex items-center justify-center gap-3 hover:bg-surface-container-high transition-colors self-start md:self-auto group">
+<span class="material-symbols-outlined transition-transform group-hover:rotate-90" data-icon="add_circle">add_circle</span>
+                Add New Service
+            </button>
+</header>
+<!-- Bento Grid Service List -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Service Card 1: Botanical Facial (Featured/Large) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center shadow-[0_32px_32px_-4px_rgba(26,28,28,0.06)] group">
+<div class="w-full md:w-64 h-48 rounded-lg overflow-hidden shrink-0">
+<img alt="Botanical Facial" class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="Close-up of a premium botanical facial treatment with organic oils and green leaves in a serene spa setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5RP4k_GRvIFfkdiyfKtXsYAmK2EySAnf-5xSeObh7oWIF_1LPO7B_21Ggg7X3dH4aVAQi1DYBf2Y18wvypvrMmdXE9QK7bLbh_PbJQsXk3Aru7SLsN37kScdwUjC76IYIamqMV2HfsHiDN73WBk_D4gD-jaxb4gAGmcLQsx5QVAz8XAs7lap_G65In7n1Z1UF4CPU5ytqJFjjyJSvgfd1tmhHI89Z_Q88pj6sTuEgBLuM4hqQjiaeMJw6iJh_UMkn4x2V6We_jE0F"/>
+</div>
+<div class="flex-1 flex flex-col justify-between h-full space-y-6">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] uppercase tracking-widest text-primary font-bold bg-primary-fixed/30 px-3 py-1 rounded-full">Active</span>
+<span class="text-on-surface-variant font-serif italic">60 min</span>
+</div>
+<h3 class="font-serif text-3xl text-on-surface">Botanical Facial</h3>
+<p class="text-sm text-outline mt-2 font-light leading-relaxed">A deep cleansing ritual using hand-harvested herbs and floral essences to restore natural radiance.</p>
+</div>
+<div class="flex items-center justify-between pt-4">
+<span class="text-2xl font-serif text-primary">$185</span>
+<div class="flex gap-4">
+<button class="text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+<button class="text-outline hover:text-error transition-colors"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Card (Small) -->
+<div class="lg:col-span-4 bg-primary text-on-primary rounded-xl p-8 flex flex-col justify-between shadow-lg">
+<div class="space-y-1">
+<span class="material-symbols-outlined text-4xl opacity-60" data-icon="auto_awesome">auto_awesome</span>
+<h4 class="font-serif text-2xl mt-4 italic">Service Health</h4>
+</div>
+<div>
+<div class="text-5xl font-serif mb-2">12</div>
+<p class="text-xs uppercase tracking-widest opacity-80 font-light">Total Active Offerings</p>
+</div>
+</div>
+<!-- Service Card 2: Somatic Release -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-xl p-6 flex flex-col space-y-6 group hover:bg-surface-container-high transition-colors">
+<div class="h-40 w-full rounded-lg overflow-hidden bg-surface">
+<img alt="Somatic Release" class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="Interior of a luxury zen treatment room with warm soft light hitting wooden textures and linen fabrics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj3kfVp7wYfA3l16zvHIJA37ckK_6mKKUKqrs2-sLtOkNdXkdLypiaM_wK1Vv00yz8PIxrrsfQE1NfMe3FEAxBO8L4xvhfZWbkDdmo92qxN383VD_Rnmx8M74aBYVUFOtxI9_OOSO-r9-nfUl3oU3UTzsMBulVybZNCzSi0J_X2g6N-CUB6vLpmuStjNwgZuBj2IapOMs7RGilF3u2PgIcFIEePZtoE-iAZsLIOriijMPizQdrdlK0LKRbfCjc5j4qlQyFFM1sOjCM"/>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-serif text-xl text-on-surface">Somatic Release</h3>
+<span class="text-primary font-serif">$210</span>
+</div>
+<div class="flex items-center gap-3 mt-2 text-xs text-outline uppercase tracking-wider">
+<span>90 MIN</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="text-primary-fixed-dim font-bold">Active</span>
+</div>
+</div>
+<div class="flex gap-4 pt-2 border-t border-outline-variant/10">
+<button class="text-xs uppercase tracking-widest text-outline hover:text-primary font-bold">Manage</button>
+<button class="text-xs uppercase tracking-widest text-outline hover:text-primary font-bold">Visibility</button>
+</div>
+</div>
+<!-- Service Card 3: Mineral Body Wrap -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-xl p-6 flex flex-col space-y-6 group hover:bg-surface-container-high transition-colors">
+<div class="h-40 w-full rounded-lg overflow-hidden bg-surface">
+<img alt="Mineral Body Wrap" class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="Bowl of dark natural therapeutic mineral clay and sea salts on a textured stone surface with a soft wooden spoon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATrfBhlTZ6kUoiZFX18slQuX12TF9jTq7dcD-pJp8x_e6EOFAEnC4JnQOyol4DSzIapNk56BR4C3pfK6163CHAdv4bQAgNS9w4zjasWmwy2xtU99CoXnqUISWHxe_g4Hx6pqDFR30kJq1EW9TdOR-HpmLEcMNlBe8-hYuoS3pwnoD95mM__x8_dif_LGN30A2zK7a4VLQaqWD7d0b3EOEIV5AjKQyqDEk7xeg0CW6oqYudSQihvMwLzq9PtCsAc9UUT3_dwturXEhq"/>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-serif text-xl text-on-surface">Mineral Body Wrap</h3>
+<span class="text-primary font-serif">$155</span>
+</div>
+<div class="flex items-center gap-3 mt-2 text-xs text-outline uppercase tracking-wider">
+<span>45 MIN</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="text-primary-fixed-dim font-bold">Active</span>
+</div>
+</div>
+<div class="flex gap-4 pt-2 border-t border-outline-variant/10">
+<button class="text-xs uppercase tracking-widest text-outline hover:text-primary font-bold">Manage</button>
+<button class="text-xs uppercase tracking-widest text-outline hover:text-primary font-bold">Visibility</button>
+</div>
+</div>
+<!-- Service Card 4: Zen Sound Healing -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-xl p-6 flex flex-col space-y-6 group hover:bg-surface-container-high transition-colors">
+<div class="h-40 w-full rounded-lg overflow-hidden bg-surface">
+<img alt="Zen Sound Healing" class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="Professional brass singing bowls arranged on a soft woven mat in a sun-drenched minimalist yoga studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2TOLrkVEDOUPkXnieDsqmnAjlUVRJceACgLlA9VXnadVyxNS77oIfg3KSQoBRTGNeBOsOIsCYRRXPVa76-B5J95brn3Kht7P66Jp5i3oSXGWrlPqaM_kERiYqL4oMxdeGw2ZAPxGmeKH4JGolmklqAWCe9GyDy3b4eAAAQLBXXJI5-CDYv063qOlWZqZBIxDAN1HrdRGFG6dwl47UrUwSZSlvoE-7pr_TJEEao515faGvou-8UwpE_VF-0qa0UdfoEtAxMjntjhGa"/>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-serif text-xl text-on-surface">Zen Sound Healing</h3>
+<span class="text-primary font-serif">$120</span>
+</div>
+<div class="flex items-center gap-3 mt-2 text-xs text-outline uppercase tracking-wider">
+<span>60 MIN</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="text-primary-fixed-dim font-bold">Active</span>
+</div>
+</div>
+<div class="flex gap-4 pt-2 border-t border-outline-variant/10">
+<button class="text-xs uppercase tracking-widest text-outline hover:text-primary font-bold">Manage</button>
+<button class="text-xs uppercase tracking-widest text-outline hover:text-primary font-bold">Visibility</button>
+</div>
+</div>
+</div>
+<!-- Pagination/Navigation Anchor -->
+<footer class="mt-20 flex items-center justify-between border-t border-outline-variant/20 pt-8">
+<span class="text-sm font-light text-outline">Showing 4 of 12 services</span>
+<div class="flex gap-2">
+<button class="p-2 rounded-full border border-outline-variant/30 text-outline hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2 rounded-full border border-primary text-primary bg-primary-container/10 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</footer>
+</main>
+<!-- Simple Bottom Bar for Mobile -->
+<nav class="md:hidden fixed bottom-0 w-full bg-surface/80 backdrop-blur-xl flex justify-around py-4 border-t border-outline-variant/15 z-50">
+<a class="text-primary flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] uppercase font-bold">Home</span>
+</a>
+<a class="text-primary flex flex-col items-center gap-1 border-b-2 border-primary pb-1" href="#">
+<span class="material-symbols-outlined" data-icon="spa" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="text-[10px] uppercase font-bold">Services</span>
+</a>
+<a class="text-outline flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="text-[10px] uppercase font-bold">Staff</span>
+</a>
+<a class="text-outline flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="text-[10px] uppercase font-bold">Reports</span>
+</a>
+</nav>
+</body></html>

@@ -30,7 +30,7 @@ Thêm Google sign-in cho khách hàng ở màn login public, tự tạo tài kho
 - Bilingual documentation: Đã có `_vn` cho feature. PASS
 - Explicit approval gates: Thay đổi OAuth cần approval trước khi implement. PASS
 - Minimal, pragmatic changes: Phạm vi gọn cho Google sign-in. PASS
-- Quality & verification: Không hardcode strings; ghi nhận verification trong tasks + legacy test plan. PASS
+- Quality & verification: Không hardcode strings; ghi nhận verification trong tasks + docs/delivery/test_plan.md. PASS
 - Operations & manual setup: Cần ghi nhận secrets Google OAuth. PASS
 
 ## Project Structure

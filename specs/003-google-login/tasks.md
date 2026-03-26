@@ -83,7 +83,7 @@
 **Purpose**: Shared updates and verification
 
 - [x] T013 [P] Update verification notes in specs/003-google-login/quickstart.md
-- [x] T014 [P] Record verification in legacy_docs/delivery/test_plan.md
+- [x] T014 [P] Record verification in docs/delivery/test_plan.md
 
 ---
 

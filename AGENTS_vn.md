@@ -50,7 +50,7 @@ Không được coding trước khi hoàn tất và cập nhật tài liệu.
 ### Definition of Done (Sau khi coding)
 - Code được triển khai và phân tích/kiểm thử cho phạm vi thay đổi.
 - Trạng thái được cập nhật trong `specs/<feature>/tasks.md`.
-- Ghi nhận kiểm thử trong `specs/<feature>/tasks.md` và `legacy_docs/delivery/test_plan.md` cho tới khi retired.
+- Ghi nhận kiểm thử trong `specs/<feature>/tasks.md` và `docs/delivery/test_plan.md` cho tới khi retired.
 - Bước thủ công được cập nhật trong `specs/<feature>/quickstart.md` (hoặc ghi rõ không cần).
 
 ---
@@ -204,9 +204,10 @@ Trước khi triển khai, agent phải xác nhận:
 5. Thực hiện coding.
 6. Review, sửa lint và test.
 7. Cập nhật `specs/<feature>/tasks.md` với trạng thái và ghi chú kiểm thử.
-8. Cập nhật `legacy_docs/delivery/test_plan.md` cho tới khi retired.
+8. Cập nhật `docs/delivery/test_plan.md` cho tới khi retired.
 9. Cập nhật `specs/<feature>/quickstart.md` nếu có bước thủ công.
 10. Đảm bảo mỗi task thay đổi có owner, status, last_updated, doc_impact, manual_setup_required.
+11. Nếu thêm hoặc chỉnh sửa thiết kế trong `docs/design/`, phải rà soát các đặc tả UI liên quan và cập nhật toàn bộ tài liệu/task bị ảnh hưởng để đồng bộ.
 
 ---
 
@@ -230,7 +231,7 @@ Trước khi kết thúc, agent phải nói rõ:
 - Thay đổi kiến trúc/flow/bảo mật/runtime: `specs/<feature>/research.md`
 - Thay đổi task/progress: `specs/<feature>/tasks.md`
 - Ghi nhận triển khai: `specs/<feature>/tasks.md`
-- Cập nhật chiến lược kiểm thử: `legacy_docs/delivery/test_plan.md`
+- Cập nhật chiến lược kiểm thử: `docs/delivery/test_plan.md`
 - Có bước thủ công: `specs/<feature>/quickstart.md`
 
 ---
@@ -319,4 +320,4 @@ Nếu tài liệu chưa rõ: dừng, làm rõ, cập nhật docs rồi mới ti�
 - PostgreSQL (Neon) via Prisma (001-user-login-booking)
 
 ## Retirement cho legacy docs
-- Retire `legacy_docs/delivery/test_plan.md` sau 2 lần release liên tiếp khi mọi verification notes đã nằm trong `specs/<feature>/tasks.md` và CI xanh.
+- Retire `docs/delivery/test_plan.md` sau 2 lần release liên tiếp khi mọi verification notes đã nằm trong `specs/<feature>/tasks.md` và CI xanh.

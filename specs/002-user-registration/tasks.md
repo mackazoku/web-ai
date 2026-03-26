@@ -82,7 +82,7 @@
 **Purpose**: Shared updates and verification
 
 - [x] T012 [P] Update verification notes in specs/002-user-registration/quickstart.md
-- [x] T013 [P] Record verification in legacy_docs/delivery/test_plan.md
+- [x] T013 [P] Record verification in docs/delivery/test_plan.md
 
 ---
 
