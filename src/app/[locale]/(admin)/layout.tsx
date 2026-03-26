@@ -7,6 +7,7 @@ import {getServerSession} from 'next-auth';
 import ReactQueryProvider from '@/providers/react-query-provider';
 import {locales} from '@/i18n/locales';
 import {authOptions} from '@/modules/admin/auth/auth-options';
+import AdminSidebar from '@/components/admin/admin-sidebar';
 
 type AdminLayoutProps = {
   children: React.ReactNode;
@@ -40,6 +41,8 @@ export default async function AdminLayout({children, params}: AdminLayoutProps) 
   const session = await getServerSession(authOptions);
   const role = session?.user?.role;
   const status = session?.user?.status;
+  const userName = session?.user?.name ?? null;
+  const roleKey = session?.user?.role ?? null;
   const allowedRoles = new Set(['admin', 'receptionist', 'staff']);
   const isAllowed = !!role && status === 'active' && allowedRoles.has(role);
 
@@ -66,7 +69,12 @@ export default async function AdminLayout({children, params}: AdminLayoutProps) 
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <ReactQueryProvider>{children}</ReactQueryProvider>
+      <ReactQueryProvider>
+        <div className="flex min-h-screen">
+          <AdminSidebar locale={locale} roleKey={roleKey} userName={userName} />
+          <div className="flex-1">{children}</div>
+        </div>
+      </ReactQueryProvider>
     </NextIntlClientProvider>
   );
 }

@@ -21,6 +21,7 @@
     "sidebar": {
       "brand": "Atelier Admin",
       "suite": "Bộ quản trị",
+      "toggle": "Thu gọn sidebar",
       "nav": {
         "dashboard": "Tổng quan",
         "users": "Người dùng",

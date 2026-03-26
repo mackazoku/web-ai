@@ -21,6 +21,7 @@
     "sidebar": {
       "brand": "Atelier Admin",
       "suite": "Management suite",
+      "toggle": "Toggle sidebar",
       "nav": {
         "dashboard": "Dashboard",
         "users": "Users",

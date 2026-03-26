@@ -1,10 +1,6 @@
-import Link from 'next/link';
 import {headers} from 'next/headers';
 import {Playfair_Display} from 'next/font/google';
 import {getLocale, getTranslations} from 'next-intl/server';
-
-import dashboardData from '@/modules/admin/data/dashboard.json';
-import LogoutButton from '@/modules/admin/components/logout-button';
 
 type DashboardStat = {
   key: 'revenue' | 'bookings' | 'cancellations';
@@ -125,7 +121,6 @@ type AdminPageProps = {
 export default async function AdminPage({searchParams}: AdminPageProps) {
   const t = await getTranslations('Admin');
   const locale = await getLocale();
-  const adminNavItems = ['dashboard', 'users', 'services', 'staff', 'reports'];
   const scheduleTimes = buildTimeSlots();
   const scheduleMarkers = buildTimeMarkers(scheduleTimes.length);
   const requestHeaders = headers();
@@ -163,64 +158,10 @@ export default async function AdminPage({searchParams}: AdminPageProps) {
       valueCents / 100,
     );
   const userName = dashboard.user?.name ?? t('sidebar.user.name');
-  const userRoleKey = dashboard.user?.role ?? 'admin';
-  const navItems = userRoleKey === 'admin' ? adminNavItems : ['dashboard'];
 
   return (
     <main className="min-h-screen bg-[#f6f2ea] text-neutral-900">
-      <div className="mx-auto grid w-full max-w-none gap-10 px-32 py-10 sm:px-40 lg:grid-cols-[260px_1fr] lg:px-56 xl:px-64">
-        <aside className="flex flex-col justify-between rounded-3xl border border-neutral-200 bg-white/80 p-6 shadow-[0_24px_70px_-55px_rgba(0,0,0,0.45)]">
-          <div className="space-y-6">
-            <div>
-              <p className={`${playfair.className} text-lg text-olive-800`}>{t('sidebar.brand')}</p>
-              <p className="text-[0.65rem] uppercase tracking-[0.3em] text-neutral-500">
-                {t('sidebar.suite')}
-              </p>
-            </div>
-            <nav className="space-y-4 text-sm text-neutral-600">
-              {navItems.map((item) => (
-                <div className="flex items-center gap-3" key={item}>
-                  <span
-                    className={`flex h-8 w-8 items-center justify-center rounded-full border ${
-                      item === 'dashboard' ? 'border-olive-700' : 'border-neutral-300'
-                    }`}
-                  >
-                    <span
-                      className={`h-2 w-2 rounded-full ${
-                        item === 'dashboard' ? 'bg-olive-700' : 'bg-neutral-300'
-                      }`}
-                    />
-                  </span>
-                  {item === 'dashboard' || item === 'users' ? (
-                    <Link
-                      className={item === 'dashboard' ? 'font-semibold text-olive-700' : ''}
-                      href={`/${locale}/admin${item === 'users' ? '/users' : ''}`}
-                    >
-                      {t(`sidebar.nav.${item}`)}
-                    </Link>
-                  ) : (
-                    <span>{t(`sidebar.nav.${item}`)}</span>
-                  )}
-                </div>
-              ))}
-            </nav>
-            <button className="w-full rounded-2xl bg-olive-700 px-4 py-3 text-sm font-semibold text-white">
-              {t('sidebar.newBooking')}
-            </button>
-          </div>
-          <div className="flex items-center gap-3 border-t border-neutral-200 pt-4 text-sm text-neutral-600">
-            <div className="h-10 w-10 rounded-full bg-[linear-gradient(135deg,#cdb9a0,#efe7d7)]" />
-            <div>
-              <div className="font-semibold text-neutral-900">{userName}</div>
-              <div className="text-xs text-neutral-500">
-                {t(`sidebar.roles.${userRoleKey}`)}
-              </div>
-            </div>
-          </div>
-          <LogoutButton label={t('sidebar.logout')} locale={locale} />
-        </aside>
-
-        <div className="space-y-10">
+      <div className="mx-auto w-full max-w-none space-y-10 px-32 py-10 sm:px-40 lg:px-56 xl:px-64">
           <header className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
               <h1 className={`${playfair.className} text-4xl md:text-5xl`}>
@@ -420,7 +361,6 @@ export default async function AdminPage({searchParams}: AdminPageProps) {
             </aside>
           </div>
         </div>
-      </div>
     </main>
   );
 }

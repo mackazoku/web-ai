@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import {Newsreader, Manrope} from 'next/font/google';
 import {getLocale, getTranslations} from 'next-intl/server';
 
@@ -41,7 +40,6 @@ const statusStyles: Record<ServiceCard['status'], string> = {
 
 export default async function AdminServicesPage() {
   const locale = await getLocale();
-  const tAdmin = await getTranslations('Admin');
   const t = await getTranslations('AdminServices');
 
   let services: ServiceCard[] = [];
@@ -79,52 +77,7 @@ export default async function AdminServicesPage() {
 
   return (
     <main className={`${manrope.className} min-h-screen bg-[#faf9f8] text-[#1a1c1c]`}>
-      <div className="flex min-h-screen">
-        <aside className="sticky top-0 hidden h-screen w-64 flex-col bg-[#f4f3f2] py-8 md:flex">
-          <div className="px-8">
-            <h1 className={`${newsreader.className} text-2xl italic text-[#536441]`}>
-              {tAdmin('sidebar.brand')}
-            </h1>
-            <p className="mt-1 text-xs uppercase tracking-[0.35em] text-[#75786e]">
-              {tAdmin('sidebar.suite')}
-            </p>
-          </div>
-          <nav className="mt-10 flex-1 space-y-2 text-sm text-[#75786e]">
-            {[
-              {key: 'dashboard', href: `/${locale}/admin`},
-              {key: 'users', href: `/${locale}/admin/users`},
-              {key: 'services', href: `/${locale}/admin/services`},
-              {key: 'staff', href: `/${locale}/admin`},
-              {key: 'reports', href: `/${locale}/admin`},
-            ].map((item) => (
-              <Link
-                key={item.key}
-                href={item.href}
-                className={`flex items-center gap-3 px-8 py-3 transition-all hover:bg-[#e3e2e1] ${
-                  item.key === 'services'
-                    ? 'ml-4 rounded-l-full bg-white px-4 font-semibold text-[#536441] shadow-sm'
-                    : ''
-                }`}
-              >
-                <span className="h-2 w-2 rounded-full bg-current" aria-hidden />
-                <span>{tAdmin(`sidebar.nav.${item.key}`)}</span>
-              </Link>
-            ))}
-          </nav>
-          <div className="px-6">
-            <button
-              type="button"
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#536441] to-[#9caf87] py-4 text-sm font-medium text-white shadow-[0_32px_32px_-4px_rgba(26,28,28,0.06)] transition-transform hover:scale-[0.98]"
-            >
-              <span className="text-lg" aria-hidden>
-                +
-              </span>
-              {tAdmin('sidebar.newBooking')}
-            </button>
-          </div>
-        </aside>
-
-        <section className="flex-1 px-8 py-12 md:px-16">
+      <section className="px-8 py-12 md:px-16">
           <header className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div className="space-y-4">
               <nav className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#75786e]">
@@ -367,8 +320,7 @@ export default async function AdminServicesPage() {
               </div>
             )}
           </div>
-        </section>
-      </div>
+      </section>
     </main>
   );
 }
